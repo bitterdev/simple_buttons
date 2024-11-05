@@ -1,0 +1,56 @@
+.ccm-page .btn.btn-primary.disabled, .ccm-page .btn.btn-primary:disabled, .ccm-btn-preview-container .btn.btn-primary.disabled, .ccm-btn-preview-container .btn.btn-primary:disabled {
+  color: var(--primary-button-disabled-text-color);
+  background-color: var(--primary-button-disabled-background-color);
+  border-color: var(--primary-button-disabled-border-color);
+}
+.ccm-page .btn.btn-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-primary:not(.disabled):not(:disabled) {
+  color: var(--primary-button-regular-text-color);
+  background-color: var(--primary-button-regular-background-color);
+  border-color: var(--primary-button-regular-border-color);
+}
+.ccm-page .btn.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-primary:not(.disabled):not(:disabled):hover {
+  color: var(--primary-button-active-text-color);
+  background-color: var(--primary-button-active-background-color);
+  border-color: var(--primary-button-active-border-color);
+}
+.ccm-page .btn.btn-outline-primary.disabled, .ccm-page .btn.btn-outline-primary:disabled, .ccm-btn-preview-container .btn.btn-outline-primary.disabled, .ccm-btn-preview-container .btn.btn-outline-primary:disabled {
+  color: var(--primary-button-disabled-border-color);
+  border-color: var(--primary-button-disabled-border-color);
+}
+.ccm-page .btn.btn-outline-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-outline-primary:not(.disabled):not(:disabled) {
+  color: var(--primary-button-active-border-color);
+  border-color: var(--primary-button-regular-border-color);
+}
+.ccm-page .btn.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-outline-primary:not(.disabled):not(:disabled):hover {
+  color: var(--primary-button-active-text-color);
+  background-color: var(--primary-button-active-background-color);
+  border-color: var(--primary-button-active-border-color);
+}
+.ccm-page .btn.btn-secondary.disabled, .ccm-page .btn.btn-secondary:disabled, .ccm-btn-preview-container .btn.btn-secondary.disabled, .ccm-btn-preview-container .btn.btn-secondary:disabled {
+  color: var(--secondary-button-disabled-text-color);
+  background-color: var(--secondary-button-disabled-background-color);
+  border-color: var(--secondary-button-disabled-border-color);
+}
+.ccm-page .btn.btn-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-secondary:not(.disabled):not(:disabled) {
+  color: var(--secondary-button-regular-text-color);
+  background-color: var(--secondary-button-regular-background-color);
+  border-color: var(--secondary-button-regular-border-color);
+}
+.ccm-page .btn.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-secondary:not(.disabled):not(:disabled):hover {
+  color: var(--secondary-button-active-text-color);
+  background-color: var(--secondary-button-active-background-color);
+  border-color: var(--secondary-button-active-border-color);
+}
+.ccm-page .btn.btn-outline-secondary.disabled, .ccm-page .btn.btn-outline-secondary:disabled, .ccm-btn-preview-container .btn.btn-outline-secondary.disabled, .ccm-btn-preview-container .btn.btn-outline-secondary:disabled {
+  color: var(--secondary-button-disabled-border-color);
+  border-color: var(--secondary-button-disabled-border-color);
+}
+.ccm-page .btn.btn-outline-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-outline-secondary:not(.disabled):not(:disabled) {
+  color: var(--secondary-button-regular-border-color);
+  border-color: var(--secondary-button-regular-border-color);
+}
+.ccm-page .btn.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-outline-secondary:not(.disabled):not(:disabled):hover {
+  color: var(--secondary-button-active-text-color);
+  background-color: var(--secondary-button-active-background-color);
+  border-color: var(--secondary-button-active-border-color);
+}

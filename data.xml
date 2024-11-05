@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concrete5-cif version="1.0">
+    <blocktypes>
+        <blocktype handle="buttons" package="simple_buttons"/>
+    </blocktypes>
+
+    <blocktypesets>
+        <blocktypeset handle="form" name="Forms" package="">
+            <blocktype handle="buttons"/>
+        </blocktypeset>
+    </blocktypesets>
+
+    <singlepages>
+        <page name="Simple Buttons" path="/dashboard/simple_buttons"
+              filename="/dashboard/simple_buttons.php" package="simple_buttons"/>
+        <page name="Colors" path="/dashboard/simple_buttons/colors"
+              filename="/dashboard/simple_buttons/colors.php"
+              package="simple_buttons"/>
+    </singlepages>
+</concrete5-cif>
