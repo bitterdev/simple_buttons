@@ -7,20 +7,88 @@
   padding: 1rem 1rem;
   border: 1px solid transparent;
   outline: none;
-}
-.ccm-page .btn i, .ccm-btn-preview-container .btn i {
-  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  line-height: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  letter-spacing: 0.5px;
 }
 .ccm-page .btn .label, .ccm-btn-preview-container .btn .label {
   display: inline-block;
+  min-height: 1rem;
+}
+.ccm-page .btn.btn-has-icon i, .ccm-btn-preview-container .btn.btn-has-icon i {
+  margin-right: 0.5rem;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+}
+.ccm-page .btn.btn-has-icon i::before, .ccm-btn-preview-container .btn.btn-has-icon i::before {
+  line-height: 1rem;
+}
+.ccm-page .btn.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-has-icon .label {
+  display: inline-block;
+  width: calc(100% - 1.5rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 1rem;
+}
+.ccm-page .btn.btn-has-icon:active, .ccm-btn-preview-container .btn.btn-has-icon:active {
+  box-shadow: none;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-right i {
+  right: 0.5rem;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-right .label, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-right .label {
+  margin-right: 1.5rem;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left i {
+  left: 1rem;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left .label {
+  margin-left: 1.5rem;
 }
 .ccm-page .btn.btn-sm, .ccm-btn-preview-container .btn.btn-sm {
   padding: 0.5rem 1rem;
   font-size: 0.8em;
 }
+.ccm-page .btn.btn-sm.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon .label {
+  width: calc(100% - 0.75rem);
+}
+.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-right i {
+  right: 0;
+}
+.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-right .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-right .label {
+  margin-right: 0.75rem;
+}
+.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-left i {
+  left: 0.5rem;
+}
+.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-left .label {
+  margin-left: 0.75rem;
+}
 .ccm-page .btn.btn-lg, .ccm-btn-preview-container .btn.btn-lg {
   padding: 1.5rem 1.5rem;
   font-size: 1.1em;
+}
+.ccm-page .btn.btn-lg.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon .label {
+  width: calc(100% - 2rem);
+}
+.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-right i {
+  right: 1.5rem;
+}
+.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-right .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-right .label {
+  margin-right: 2rem;
+}
+.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-left i {
+  left: 1.5rem;
+}
+.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-left .label {
+  margin-left: 2rem;
 }
 .ccm-page .btn.disabled, .ccm-page .btn:disabled, .ccm-btn-preview-container .btn.disabled, .ccm-btn-preview-container .btn:disabled {
   cursor: not-allowed;
@@ -35,20 +103,21 @@
   background-color: rgb(var(--primary-button-regular-background-color));
   border-color: rgb(var(--primary-button-regular-border-color));
 }
-.ccm-page .btn.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-primary:not(.disabled):not(:disabled):active {
   color: rgb(var(--primary-button-active-text-color));
   background-color: rgb(var(--primary-button-active-background-color));
   border-color: rgb(var(--primary-button-active-border-color));
 }
 .ccm-page .btn.btn-outline-primary.disabled, .ccm-page .btn.btn-outline-primary:disabled, .ccm-btn-preview-container .btn.btn-outline-primary.disabled, .ccm-btn-preview-container .btn.btn-outline-primary:disabled {
   color: rgb(var(--primary-button-disabled-border-color));
+  background-color: transparent !important;
   border-color: rgb(var(--primary-button-disabled-border-color));
 }
 .ccm-page .btn.btn-outline-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-outline-primary:not(.disabled):not(:disabled) {
   color: rgb(var(--primary-button-active-border-color));
   border-color: rgb(var(--primary-button-regular-border-color));
 }
-.ccm-page .btn.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-outline-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-outline-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-outline-primary:not(.disabled):not(:disabled):active {
   color: rgb(var(--primary-button-active-text-color));
   background-color: rgb(var(--primary-button-active-background-color));
   border-color: rgb(var(--primary-button-active-border-color));
@@ -63,20 +132,21 @@
   background-color: rgb(var(--secondary-button-regular-background-color));
   border-color: rgb(var(--secondary-button-regular-border-color));
 }
-.ccm-page .btn.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-secondary:not(.disabled):not(:disabled):active {
   color: rgb(var(--secondary-button-active-text-color));
   background-color: rgb(var(--secondary-button-active-background-color));
   border-color: rgb(var(--secondary-button-active-border-color));
 }
 .ccm-page .btn.btn-outline-secondary.disabled, .ccm-page .btn.btn-outline-secondary:disabled, .ccm-btn-preview-container .btn.btn-outline-secondary.disabled, .ccm-btn-preview-container .btn.btn-outline-secondary:disabled {
   color: rgb(var(--secondary-button-disabled-border-color));
+  background-color: transparent !important;
   border-color: rgb(var(--secondary-button-disabled-border-color));
 }
 .ccm-page .btn.btn-outline-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-outline-secondary:not(.disabled):not(:disabled) {
   color: rgb(var(--secondary-button-regular-border-color));
   border-color: rgb(var(--secondary-button-regular-border-color));
 }
-.ccm-page .btn.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-outline-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-outline-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-outline-secondary:not(.disabled):not(:disabled):active {
   color: rgb(var(--secondary-button-active-text-color));
   background-color: rgb(var(--secondary-button-active-background-color));
   border-color: rgb(var(--secondary-button-active-border-color));
@@ -144,10 +214,10 @@
 .ccm-page .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled) {
   background: linear-gradient(to right, rgb(var(--primary-button-regular-background-color)) 33%, hsl(from rgb(var(--primary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to right, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-right.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-outline-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-right.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-right.btn-outline-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-outline-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to right, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-right.btn-secondary.disabled, .ccm-page .btn.btn-gradient-direction-right.btn-secondary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-secondary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-secondary:disabled {
@@ -156,10 +226,10 @@
 .ccm-page .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled) {
   background: linear-gradient(to right, rgb(var(--secondary-button-regular-background-color)) 33%, hsl(from rgb(var(--secondary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to right, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-right.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-outline-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-right.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-right.btn-outline-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-outline-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to right, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-left.btn-primary.disabled, .ccm-page .btn.btn-gradient-direction-left.btn-primary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-primary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-primary:disabled {
@@ -168,10 +238,10 @@
 .ccm-page .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled) {
   background: linear-gradient(to left, rgb(var(--primary-button-regular-background-color)) 33%, hsl(from rgb(var(--primary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to left, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-left.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-outline-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-left.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-left.btn-outline-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-outline-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to left, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-left.btn-secondary.disabled, .ccm-page .btn.btn-gradient-direction-left.btn-secondary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-secondary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-secondary:disabled {
@@ -180,10 +250,10 @@
 .ccm-page .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled) {
   background: linear-gradient(to left, rgb(var(--secondary-button-regular-background-color)) 33%, hsl(from rgb(var(--secondary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to left, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-left.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-outline-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-left.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-left.btn-outline-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-left.btn-outline-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to left, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-top.btn-primary.disabled, .ccm-page .btn.btn-gradient-direction-top.btn-primary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-primary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-primary:disabled {
@@ -192,10 +262,10 @@
 .ccm-page .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled) {
   background: linear-gradient(to top, rgb(var(--primary-button-regular-background-color)) 33%, hsl(from rgb(var(--primary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to top, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-top.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-outline-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-top.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-top.btn-outline-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-outline-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to top, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-top.btn-secondary.disabled, .ccm-page .btn.btn-gradient-direction-top.btn-secondary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-secondary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-secondary:disabled {
@@ -204,10 +274,10 @@
 .ccm-page .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled) {
   background: linear-gradient(to top, rgb(var(--secondary-button-regular-background-color)) 33%, hsl(from rgb(var(--secondary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to top, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-top.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-outline-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-top.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-top.btn-outline-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-top.btn-outline-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to top, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-bottom.btn-primary.disabled, .ccm-page .btn.btn-gradient-direction-bottom.btn-primary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-primary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-primary:disabled {
@@ -216,10 +286,10 @@
 .ccm-page .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled) {
   background: linear-gradient(to bottom, rgb(var(--primary-button-regular-background-color)) 33%, hsl(from rgb(var(--primary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to bottom, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-bottom.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-primary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-bottom.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-bottom.btn-outline-primary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-primary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-primary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to bottom, rgb(var(--primary-button-active-background-color)) 33%, hsl(from rgb(var(--primary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-gradient-direction-bottom.btn-secondary.disabled, .ccm-page .btn.btn-gradient-direction-bottom.btn-secondary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-secondary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-secondary:disabled {
@@ -228,24 +298,23 @@
 .ccm-page .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled) {
   background: linear-gradient(to bottom, rgb(var(--secondary-button-regular-background-color)) 33%, hsl(from rgb(var(--secondary-button-regular-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to bottom, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to bottom, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
 .ccm-page .btn.btn-rounded-icon i, .ccm-btn-preview-container .btn.btn-rounded-icon i {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5em;
-  height: 1.5em;
-  line-height: 1.5em;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
   border-radius: 50%;
-  margin-right: 0.5em;
 }
-.ccm-page .btn.btn-rounded-icon div, .ccm-btn-preview-container .btn.btn-rounded-icon div {
-  display: inline-flex;
+.ccm-page .btn.btn-rounded-icon i::before, .ccm-btn-preview-container .btn.btn-rounded-icon i::before {
+  font-size: 0.6em;
 }
 .ccm-page .btn.btn-rounded-icon.btn-primary.disabled i, .ccm-page .btn.btn-rounded-icon.btn-primary:disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary.disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:disabled i {
   background-color: rgb(var(--primary-button-disabled-text-color));
@@ -255,7 +324,7 @@
   background-color: rgb(var(--primary-button-regular-text-color));
   color: rgb(var(--primary-button-regular-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):hover i {
+.ccm-page .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--primary-button-active-text-color));
   color: rgb(var(--primary-button-active-background-color));
 }
@@ -267,7 +336,7 @@
   background-color: rgb(var(--primary-button-active-border-color));
   color: rgb(var(--primary-button-active-text-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):hover i {
+.ccm-page .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--primary-button-active-text-color));
   color: rgb(var(--primary-button-active-background-color));
 }
@@ -279,7 +348,7 @@
   background-color: rgb(var(--secondary-button-regular-text-color));
   color: rgb(var(--secondary-button-regular-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):hover i {
+.ccm-page .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--secondary-button-active-text-color));
   color: rgb(var(--secondary-button-active-background-color));
 }
@@ -291,7 +360,7 @@
   background-color: rgb(var(--secondary-button-regular-border-color));
   color: rgb(var(--secondary-button-active-text-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):hover i {
+.ccm-page .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--secondary-button-active-text-color));
   color: rgb(var(--secondary-button-active-background-color));
 }
@@ -302,29 +371,13 @@
   justify-content: center;
   transition: all 0.3s;
 }
-.ccm-page .btn.btn-animated-icon:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-animated-icon:not(.disabled):not(:disabled):hover {
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-.ccm-page .btn.btn-animated-icon:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-animated-icon:not(.disabled):not(:disabled):hover i {
+.ccm-page .btn.btn-animated-icon:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-animated-icon:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-animated-icon:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-animated-icon:not(.disabled):not(:disabled):active i {
   transform: rotate(45deg);
-}
-.ccm-page .btn.btn-animated-icon:active, .ccm-btn-preview-container .btn.btn-animated-icon:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .ccm-page .btn.btn-animated-icon i, .ccm-btn-preview-container .btn.btn-animated-icon i {
   transition: all 0.3s;
 }
-.ccm-page .btn.btn-animated-text, .ccm-btn-preview-container .btn.btn-animated-text {
-  line-height: 1rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-}
 .ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) {
-  box-shadow: var(--shadow);
   transition: transform 0.44s ease, box-shadow 0.44s ease;
 }
 .ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled).btn-primary div, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled).btn-primary div {
@@ -645,12 +698,12 @@
 .ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(99), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(99) {
   transition-delay: 3.3s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled):hover span, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled):hover span {
+.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled):hover span, .ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled):active span, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled):hover span, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled):active span {
   --m: calc(1rem * -1);
 }
 .ccm-page .btn.btn-animated-on-hover, .ccm-btn-preview-container .btn.btn-animated-on-hover {
   transition: all 0.3s;
 }
-.ccm-page .btn.btn-animated-on-hover:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-animated-on-hover:not(.disabled):not(:disabled):hover {
+.ccm-page .btn.btn-animated-on-hover:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-animated-on-hover:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-animated-on-hover:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-animated-on-hover:not(.disabled):not(:disabled):active {
   transform: translateY(-3px);
 }

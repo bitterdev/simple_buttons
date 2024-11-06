@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: simple_buttons 0.0.5\n"
+"Project-Id-Version: simple_buttons 0.0.7\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-05T11:30:17+00:00\n"
-"PO-Revision-Date: 2024-11-05T11:30:17+00:00\n"
+"POT-Creation-Date: 2024-11-06T15:22:08+00:00\n"
+"PO-Revision-Date: 2024-11-06T15:22:08+00:00\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -24,6 +24,10 @@ msgstr ""
 
 #: packages/simple_buttons/data.xml:18
 msgid "Colors"
+msgstr ""
+
+#: packages/simple_buttons/data.xml:21
+msgid "Options"
 msgstr ""
 
 #: packages/simple_buttons/controller.php:20
@@ -339,7 +343,109 @@ msgid "Disabled State"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:258
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:205
 msgid "Save"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:41
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:63
+msgid "Solid Color"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:42
+msgid "Gradient (Top to Bottom)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:43
+msgid "Gradient (Bottom to Top)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:44
+msgid "Gradient (Right to Left)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:45
+msgid "Gradient (Left to Right)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:49
+msgid "No Shadow"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:50
+msgid "Shadow Style 1"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:51
+msgid "Shadow Style 2"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:52
+msgid "Shadow Style 3"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:53
+msgid "Shadow Style 4"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:54
+msgid "Shadow Style 5"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:55
+msgid "Shadow Style 6"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:56
+msgid "Shadow Style 7"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:57
+msgid "Shadow Style 8"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:58
+msgid "Shadow Style 9"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:59
+msgid "Shadow Style 10"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:64
+msgid "Rounded Corners (5px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:65
+msgid "Rounded Corners (10px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:66
+msgid "Rounded Corners (15px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:67
+msgid "Rounded Corners (20px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:68
+msgid "Rounded Corners (25px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:69
+msgid "Rounded Corners (30px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:70
+msgid "Rounded Corners (35px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:71
+msgid "Rounded Corners (40px)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:72
+msgid "Rounded Corners (45px)"
 msgstr ""
 
 #: packages/simple_buttons/elements/dashboard/help.php:10
@@ -424,6 +530,7 @@ msgid "You need to enter a valid border color for the secondary button disabled 
 msgstr ""
 
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:75
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/options.php:45
 msgid "The settings has been successfully updated."
 msgstr ""
 

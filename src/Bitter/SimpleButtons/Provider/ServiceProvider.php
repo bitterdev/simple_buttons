@@ -12,6 +12,7 @@ use Concrete\Core\Site\Config\Liaison;
 use Concrete\Core\Site\Service;
 use Concrete\Core\View\View;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\EventDispatcher\GenericEvent;
 use Tomloprod\Colority\Services\ColorityManager;
 
 class ServiceProvider extends Provider
@@ -64,6 +65,14 @@ class ServiceProvider extends Provider
     private function injectStyles()
     {
         $this->eventDispatcher->addListener('on_before_render', function () {
+
+
+            /** @noinspection CssUnresolvedCustomProperty */
+            $js =
+                "<script>\n" .
+                "CCM_BUTTON_CLASSES = " . json_encode((string)$this->config->get("simple_buttons.options.additional_classes", "")) . ";\n" .
+                "</script>\n";
+
             /** @noinspection CssUnresolvedCustomProperty */
             $css =
                 "<style>\n" .
@@ -94,6 +103,7 @@ class ServiceProvider extends Provider
 
             if ($c instanceof Page && !$c->isError()) {
                 $view->addHeaderItem($css);
+                $view->addHeaderItem($js);
                 $view->requireAsset("simple_buttons");
                 $view->requireAsset("javascript", "jquery");
                 $view->requireAsset("css", "font-awesome");

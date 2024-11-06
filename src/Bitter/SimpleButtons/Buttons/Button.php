@@ -9,6 +9,8 @@ use Bitter\SimpleButtons\Buttons\Enumerations\Relationship;
 use Bitter\SimpleButtons\Buttons\Enumerations\Target;
 use Concrete\Core\Foundation\ConcreteObject;
 use Concrete\Core\Html\Service\FontAwesomeIcon;
+use Concrete\Core\Site\Service;
+use Concrete\Core\Support\Facade\Application;
 use HtmlObject\Element;
 
 class Button extends ConcreteObject
@@ -25,6 +27,7 @@ class Button extends ConcreteObject
     protected bool $openLinkInNewWindow = false;
     protected bool $isDisabled = false;
     protected bool $outline = false;
+    protected bool $applyOptions = true;
 
     /**
      * @return string|null
@@ -300,6 +303,24 @@ class Button extends ConcreteObject
         return $this;
     }
 
+    /**
+     * @return bool
+     */
+    public function isApplyOptions(): bool
+    {
+        return $this->applyOptions;
+    }
+
+    /**
+     * @param bool $applyOptions
+     * @return Button
+     */
+    public function setApplyOptions(bool $applyOptions): Button
+    {
+        $this->applyOptions = $applyOptions;
+        return $this;
+    }
+
     public function getTag(): Element
     {
         $element = new Element("a");
@@ -353,22 +374,54 @@ class Button extends ConcreteObject
             }
         }
 
+        $element->addClass("btn-processed-text");
+
+        $labelHtml = "";
+
+        for ($i = 0; $i <= strlen($this->getLabel()); $i++) {
+            $b = substr($this->getLabel(), $i, 1);
+
+            if ($b === " ") {
+                $b = "&nbsp;";
+            }
+
+            $labelHtml .= "<span>$b</span>";
+        }
+
+        $labelHtml = "<div class='label'>$labelHtml</div>";
+        
         if (!empty($this->getIcon())) {
             $iconHtml = FontAwesomeIcon::getFromClassNames(h($this->getIcon()))->getTag()->render();
 
+            $element->addClass("btn-has-icon");
+
             if (!empty($this->getLabel())) {
                 if ($this->getIconPosition() === IconPosition::ICON_POSITION_RIGHT) {
-                    $element->setValue($this->getLabel() . " " . $iconHtml);
+                    $element->setValue($labelHtml . " " . $iconHtml);
+                    $element->addClass("btn-icon-right");
                 } else {
-                    $element->setValue($iconHtml . " " . $this->getLabel());
+                    $element->setValue($iconHtml . " " . $labelHtml);
+                    $element->addClass("btn-icon-left");
                 }
             } else {
                 $element->setValue($iconHtml);
             }
         } else {
             if (!empty($this->getLabel())) {
-                $element->setValue($this->getLabel());
+                $element->setValue($labelHtml);
             }
+        }
+        
+        // Apply options
+        if ($this->isApplyOptions()) {
+            $app = Application::getFacadeApplication();
+            /** @var Service $siteService */
+            /** @noinspection PhpUnhandledExceptionInspection */
+            $siteService = $app->make(Service::class);
+            $site = $siteService->getSite();
+            $config = $site->getConfigRepository();
+
+            $element->addClass($config->get("simple_buttons.options.additional_classes"));
         }
 
         return $element;
