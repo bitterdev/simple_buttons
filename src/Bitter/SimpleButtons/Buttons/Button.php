@@ -421,7 +421,7 @@ class Button extends ConcreteObject
             $site = $siteService->getSite();
             $config = $site->getConfigRepository();
 
-            $element->addClass($config->get("simple_buttons.options.additional_classes"));
+            $element->addClass($config->get("simple_buttons.styles.additional_classes"));
         }
 
         return $element;

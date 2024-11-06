@@ -1,3 +1,14 @@
+.ccm-page .input-group, .ccm-btn-preview-container .input-group {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  overflow: scroll;
+}
+.ccm-page .input-group .btn:not(:last-child):not(:first-child), .ccm-btn-preview-container .input-group .btn:not(:last-child):not(:first-child) {
+  border-radius: 0 !important;
+}
 .ccm-page .btn, .ccm-btn-preview-container .btn {
   all: initial;
   font-family: inherit;
@@ -165,18 +176,6 @@
 }
 .ccm-page .btn.btn-rounded-corners-25, .ccm-btn-preview-container .btn.btn-rounded-corners-25 {
   border-radius: 25px;
-}
-.ccm-page .btn.btn-rounded-corners-30, .ccm-btn-preview-container .btn.btn-rounded-corners-30 {
-  border-radius: 30px;
-}
-.ccm-page .btn.btn-rounded-corners-35, .ccm-btn-preview-container .btn.btn-rounded-corners-35 {
-  border-radius: 35px;
-}
-.ccm-page .btn.btn-rounded-corners-40, .ccm-btn-preview-container .btn.btn-rounded-corners-40 {
-  border-radius: 40px;
-}
-.ccm-page .btn.btn-rounded-corners-45, .ccm-btn-preview-container .btn.btn-rounded-corners-45 {
-  border-radius: 45px;
 }
 .ccm-page .btn.btn-shadow-style-1, .ccm-btn-preview-container .btn.btn-shadow-style-1 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

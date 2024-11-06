@@ -13,11 +13,5 @@
     <singlepages>
         <page name="Simple Buttons" path="/dashboard/simple_buttons"
               filename="/dashboard/simple_buttons.php" package="simple_buttons"/>
-        <page name="Colors" path="/dashboard/simple_buttons/colors"
-              filename="/dashboard/simple_buttons/colors.php"
-              package="simple_buttons"/>
-        <page name="Options" path="/dashboard/simple_buttons/options"
-              filename="/dashboard/simple_buttons/options.php"
-              package="simple_buttons"/>
     </singlepages>
 </concrete5-cif>

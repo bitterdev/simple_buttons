@@ -1,2 +1,106 @@
 @import "mixins";
-@import "styles";
+
+.ccm-page, .ccm-btn-preview-container {
+  .input-group {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+    overflow: scroll;
+
+    .btn {
+      &:not(:last-child):not(:first-child) {
+        border-radius: 0 !important;
+      }
+
+    }
+  }
+
+
+  .btn {
+    @include btn-reset;
+
+    $i: 5;
+
+    @while $i < 30 {
+      &.btn-rounded-corners-#{$i} {
+        @include btn-rounded-corners($border-radius: $i);
+      }
+
+      $i: $i + 5;
+    }
+
+    &.btn-shadow-style-1 {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    &.btn-shadow-style-2 {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &.btn-shadow-style-3 {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    &.btn-shadow-style-4 {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    &.btn-shadow-style-5 {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+
+    &.btn-shadow-style-6 {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &.btn-shadow-style-7 {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    &.btn-shadow-style-8 {
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+
+    &.btn-shadow-style-9 {
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    &.btn-shadow-style-10 {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    &.btn-gradient-direction-right {
+      @include btn-gradient($direction: "to right");
+    }
+
+    &.btn-gradient-direction-left {
+      @include btn-gradient($direction: "to left");
+    }
+
+    &.btn-gradient-direction-top {
+      @include btn-gradient($direction: "to top");
+    }
+
+    &.btn-gradient-direction-bottom {
+      @include btn-gradient($direction: "to bottom");
+    }
+
+    &.btn-rounded-icon {
+      @include btn-rounded-icon;
+    }
+
+    &.btn-animated-icon {
+      @include btn-animated-icon;
+    }
+
+    &.btn-animated-text {
+      @include btn-animated-text;
+    }
+
+    &.btn-animated-on-hover {
+      @include btn-animated-on-hover;
+    }
+  }
+}

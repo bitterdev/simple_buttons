@@ -70,31 +70,31 @@ class ServiceProvider extends Provider
             /** @noinspection CssUnresolvedCustomProperty */
             $js =
                 "<script>\n" .
-                "CCM_BUTTON_CLASSES = " . json_encode((string)$this->config->get("simple_buttons.options.additional_classes", "")) . ";\n" .
+                "CCM_BUTTON_CLASSES = " . json_encode((string)$this->config->get("simple_buttons.styles.additional_classes", "")) . ";\n" .
                 "</script>\n";
 
             /** @noinspection CssUnresolvedCustomProperty */
             $css =
                 "<style>\n" .
                 ":root {\n" .
-                "  --primary-button-regular-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.regular.colors.text", "#fff")) . ";\n" .
-                "  --primary-button-regular-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.regular.colors.background", "#0d6efd")) . ";\n" .
-                "  --primary-button-regular-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.regular.colors.border", "#0d6efd")) . ";\n" .
-                "  --primary-button-disabled-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.disabled.colors.text", "#fff")) . ";\n" .
-                "  --primary-button-disabled-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.disabled.colors.background", "#71acff")) . ";\n" .
-                "  --primary-button-disabled-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.disabled.colors.border", "#71acff")) . ";\n" .
-                "  --primary-button-active-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.active.colors.text", "#fff")) . ";\n" .
-                "  --primary-button-active-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.active.colors.background", "#0b5ed7")) . ";\n" .
-                "  --primary-button-active-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.primary.states.active.colors.border", "#0a58ca")) . ";\n" .
-                "  --secondary-button-regular-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.regular.colors.text", "#fff")) . ";\n" .
-                "  --secondary-button-regular-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.regular.colors.background", "#6c757d")) . ";\n" .
-                "  --secondary-button-regular-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.regular.colors.border", "#6c757d")) . ";\n" .
-                "  --secondary-button-disabled-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.disabled.colors.text", "#fff")) . ";\n" .
-                "  --secondary-button-disabled-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.disabled.colors.background", "#a2a8ad")) . ";\n" .
-                "  --secondary-button-disabled-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.disabled.colors.border", "#a2a8ad")) . ";\n" .
-                "  --secondary-button-active-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.active.colors.text", "#fff")) . ";\n" .
-                "  --secondary-button-active-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.active.colors.background", "#5c636a")) . ";\n" .
-                "  --secondary-button-active-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.secondary.states.active.colors.border", "#565e64")) . ";\n" .
+                "  --primary-button-regular-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.regular.colors.text", "#fff")) . ";\n" .
+                "  --primary-button-regular-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.regular.colors.background", "#0d6efd")) . ";\n" .
+                "  --primary-button-regular-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.regular.colors.border", "#0d6efd")) . ";\n" .
+                "  --primary-button-disabled-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.disabled.colors.text", "#fff")) . ";\n" .
+                "  --primary-button-disabled-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.disabled.colors.background", "#71acff")) . ";\n" .
+                "  --primary-button-disabled-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.disabled.colors.border", "#71acff")) . ";\n" .
+                "  --primary-button-active-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.active.colors.text", "#fff")) . ";\n" .
+                "  --primary-button-active-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.active.colors.background", "#0b5ed7")) . ";\n" .
+                "  --primary-button-active-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.primary.states.active.colors.border", "#0a58ca")) . ";\n" .
+                "  --secondary-button-regular-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.regular.colors.text", "#fff")) . ";\n" .
+                "  --secondary-button-regular-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.regular.colors.background", "#6c757d")) . ";\n" .
+                "  --secondary-button-regular-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.regular.colors.border", "#6c757d")) . ";\n" .
+                "  --secondary-button-disabled-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.disabled.colors.text", "#fff")) . ";\n" .
+                "  --secondary-button-disabled-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.disabled.colors.background", "#a2a8ad")) . ";\n" .
+                "  --secondary-button-disabled-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.disabled.colors.border", "#a2a8ad")) . ";\n" .
+                "  --secondary-button-active-text-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.active.colors.text", "#fff")) . ";\n" .
+                "  --secondary-button-active-background-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.active.colors.background", "#5c636a")) . ";\n" .
+                "  --secondary-button-active-border-color: " . $this->toRgb($this->config->get("simple_buttons.styles.buttons.secondary.states.active.colors.border", "#565e64")) . ";\n" .
                 "}\n" .
                 "</style>\n";
 
