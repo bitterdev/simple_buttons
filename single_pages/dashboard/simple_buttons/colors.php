@@ -88,6 +88,10 @@ echo $ui->tabs([
                     <div>
                         <?php $colorPicker->output("primaryButtonRegularBorderColor", $primaryButtonRegularBorderColor); ?>
                     </div>
+
+                    <p class="help-block">
+                        <?php echo t("Note: For outline buttons, the border color is also used as the text color."); ?>
+                    </p>
                 </div>
             </fieldset>
 
@@ -180,6 +184,10 @@ echo $ui->tabs([
                     <div>
                         <?php $colorPicker->output("secondaryButtonRegularBorderColor", $secondaryButtonRegularBorderColor); ?>
                     </div>
+
+                    <p class="help-block">
+                        <?php echo t("Note: For outline buttons, the border color is also used as the text color."); ?>
+                    </p>
                 </div>
             </fieldset>
 

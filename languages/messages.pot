@@ -1,0 +1,496 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple_buttons 0.0.5\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-11-05T11:30:17+00:00\n"
+"PO-Revision-Date: 2024-11-05T11:30:17+00:00\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: packages/simple_buttons/data.xml:8
+msgctxt "BlockTypeSetName"
+msgid "Forms"
+msgstr ""
+
+#: packages/simple_buttons/data.xml:15
+#: packages/simple_buttons/controller.php:25
+msgid "Simple Buttons"
+msgstr ""
+
+#: packages/simple_buttons/data.xml:18
+msgid "Colors"
+msgstr ""
+
+#: packages/simple_buttons/controller.php:20
+msgid "Add buttons and button groups to your site with more than 50 customizable styles."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:32
+msgid "Add buttons to your site."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:37
+msgid "Buttons"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:43
+msgid "Internal Page"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:44
+msgid "External URL"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:45
+#: packages/simple_buttons/blocks/buttons/edit.php:246
+msgid "File"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:49
+msgid "Primary"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:50
+msgid "Secondary"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:54
+msgid "Alternate"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:55
+msgid "Author"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:56
+msgid "Bookmark"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:57
+msgid "External"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:58
+msgid "Help"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:59
+msgid "License"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:60
+msgid "Next"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:61
+msgid "No Follow"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:62
+msgid "No Referrer"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:63
+msgid "No Opener"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:64
+msgid "Prev"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:65
+msgid "Search"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:66
+msgid "Tag"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:70
+msgid "Self"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:71
+msgid "Parent"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:72
+msgid "Blank"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:73
+msgid "Top"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:77
+msgid "Small"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:78
+msgid "Regular"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:79
+msgid "Large"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:83
+msgid "Left"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:84
+msgid "Right"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:258
+msgid "You need to add at least one button."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:263
+msgid "You need to enter a label."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:269
+msgid "You need to select a valid relationship."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:275
+msgid "You need to select a valid button style."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:280
+msgid "You need to select a valid button target."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:288
+msgid "You need to select a valid file."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:295
+msgid "You need to enter a valid url."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:302
+msgid "You need to select a valid page."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/controller.php:308
+#: packages/simple_buttons/blocks/buttons/controller.php:311
+msgid "You need to select a valid link type."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:35
+msgid "If you want to have a button group you can do so by adding multiple buttons."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:36
+msgid "Add Button"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:45
+msgid "Currently there are not buttons defined."
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:56
+msgid "Toggle"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:60
+msgid "Remove Item"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:73
+msgid "Label"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:82
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:50
+msgid "Title"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:90
+msgid "Icon"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:96
+msgid "Choose Icon"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:97
+msgctxt "Icon"
+msgid "** None Selected"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:103
+msgid "Icon Position"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:118
+msgid "Relationship"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:139
+msgid "Button Style"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:154
+msgid "Button Size"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:174
+msgid "Disabled"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:184
+msgid "Outline"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:194
+msgid "Open Link in New Window"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:201
+msgid "Target"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:216
+msgid "Link Type"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:231
+msgid "Page"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:237
+#: packages/simple_buttons/blocks/buttons/edit.php:252
+msgid "Choose Page"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:261
+msgid "URL"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:362
+msgid "Do you really want to delete this button?"
+msgstr ""
+
+#: packages/simple_buttons/blocks/buttons/edit.php:369
+msgid "Delete"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:46
+msgid "Primary Button"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:47
+msgid "Secondary Button"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:66
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:162
+msgid "Regular State"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:70
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:104
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:134
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:166
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:200
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:230
+msgid "Text Color"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:78
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:112
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:142
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:174
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:208
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:238
+msgid "Background Color"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:86
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:120
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:150
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:182
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:216
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:246
+msgid "Border Color"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:93
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:189
+msgid "Note: For outline buttons, the border color is also used as the text color."
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:100
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:196
+msgid "Active State"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:130
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:226
+msgid "Disabled State"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:258
+msgid "Save"
+msgstr ""
+
+#: packages/simple_buttons/elements/dashboard/help.php:10
+msgid "Get Help"
+msgstr ""
+
+#: packages/simple_buttons/elements/dashboard/help.php:20
+#: packages/simple_buttons/elements/dashboard/help_blocktypes.php:20
+msgid "Support"
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:35
+msgid "You need to enter a valid text color for the primary button regular state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:36
+msgid "You need to enter a valid background color for the primary button regular state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:37
+msgid "You need to enter a valid border color for the primary button regular state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:38
+msgid "You need to enter a valid text color for the primary button active state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:39
+msgid "You need to enter a valid background color for the primary button active state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:40
+msgid "You need to enter a valid border color for the primary button active state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:41
+msgid "You need to enter a valid text color for the primary button disabled state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:42
+msgid "You need to enter a valid background color for the primary button disabled state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:43
+msgid "You need to enter a valid border color for the primary button disabled state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:44
+msgid "You need to enter a valid text color for the secondary button regular state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:45
+msgid "You need to enter a valid background color for the secondary button regular state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:46
+msgid "You need to enter a valid border color for the secondary button regular state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:47
+msgid "You need to enter a valid text color for the secondary button active state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:48
+msgid "You need to enter a valid background color for the secondary button active state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:49
+msgid "You need to enter a valid border color for the secondary button active state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:50
+msgid "You need to enter a valid text color for the secondary button disabled state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:51
+msgid "You need to enter a valid background color for the secondary button disabled state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:52
+msgid "You need to enter a valid border color for the secondary button disabled state."
+msgstr ""
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:75
+msgid "The settings has been successfully updated."
+msgstr ""
+
+#: packages/simple_buttons/controllers/dialog/support/create_ticket.php:56
+msgid "Ticket Created"
+msgstr ""
+
+#: packages/simple_buttons/controllers/dialog/support/create_ticket.php:57
+msgid "Your ticket has been successfully created."
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:12
+msgid "Bug"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:13
+msgid "Enhancement"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:14
+msgid "Proposal"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:15
+msgid "Task"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:19
+msgid "Trivial"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:20
+msgid "Minor"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:21
+msgid "Major"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:22
+msgid "Critical"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:23
+msgid "Blocker"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:45
+msgid "E-Mail"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:55
+msgid "Content"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:60
+msgid "Type"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:65
+msgid "Priority"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:71
+msgid "Cancel"
+msgstr ""
+
+#: packages/simple_buttons/views/dialogs/support/create_ticket.php:75
+msgid "Create Ticket"
+msgstr ""

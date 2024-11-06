@@ -1,0 +1,376 @@
+@mixin btn-reset {
+  all: initial;
+  font-family: inherit;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  outline: none;
+
+  i {
+    margin-right: 0.5rem;
+  }
+
+  .label {
+    display: inline-block;
+  }
+
+  &.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8em;
+  }
+
+  &.btn-lg {
+    padding: 1.5rem 1.5rem;
+    font-size: 1.1em;
+  }
+
+  &.disabled, &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.btn-primary {
+    &.disabled, &:disabled {
+      color: rgb(var(--primary-button-disabled-text-color));
+      background-color: rgb(var(--primary-button-disabled-background-color));
+      border-color: rgb(var(--primary-button-disabled-border-color));
+    }
+
+    &:not(.disabled):not(:disabled) {
+      color: rgb(var(--primary-button-regular-text-color));
+      background-color: rgb(var(--primary-button-regular-background-color));
+      border-color: rgb(var(--primary-button-regular-border-color));
+
+      &:hover {
+        color: rgb(var(--primary-button-active-text-color));
+        background-color: rgb(var(--primary-button-active-background-color));
+        border-color: rgb(var(--primary-button-active-border-color));
+      }
+    }
+  }
+
+  &.btn-outline-primary {
+    &.disabled, &:disabled {
+      color: rgb(var(--primary-button-disabled-border-color));
+      border-color: rgb(var(--primary-button-disabled-border-color));
+    }
+
+    &:not(.disabled):not(:disabled) {
+      color: rgb(var(--primary-button-active-border-color));
+      border-color: rgb(var(--primary-button-regular-border-color));
+
+      &:hover {
+        color: rgb(var(--primary-button-active-text-color));
+        background-color: rgb(var(--primary-button-active-background-color));
+        border-color: rgb(var(--primary-button-active-border-color));
+      }
+    }
+  }
+
+  &.btn-secondary {
+    &.disabled, &:disabled {
+      color: rgb(var(--secondary-button-disabled-text-color));
+      background-color: rgb(var(--secondary-button-disabled-background-color));
+      border-color: rgb(var(--secondary-button-disabled-border-color));
+    }
+
+    &:not(.disabled):not(:disabled) {
+      color: rgb(var(--secondary-button-regular-text-color));
+      background-color: rgb(var(--secondary-button-regular-background-color));
+      border-color: rgb(var(--secondary-button-regular-border-color));
+
+      &:hover {
+        color: rgb(var(--secondary-button-active-text-color));
+        background-color: rgb(var(--secondary-button-active-background-color));
+        border-color: rgb(var(--secondary-button-active-border-color));
+      }
+    }
+  }
+
+  &.btn-outline-secondary {
+    &.disabled, &:disabled {
+      color: rgb(var(--secondary-button-disabled-border-color));
+      border-color: rgb(var(--secondary-button-disabled-border-color));
+    }
+
+    &:not(.disabled):not(:disabled) {
+      color: rgb(var(--secondary-button-regular-border-color));
+      border-color: rgb(var(--secondary-button-regular-border-color));
+
+      &:hover {
+        color: rgb(var(--secondary-button-active-text-color));
+        background-color: rgb(var(--secondary-button-active-background-color));
+        border-color: rgb(var(--secondary-button-active-border-color));
+      }
+    }
+  }
+}
+
+@mixin gradient($direction, $color) {
+  background: linear-gradient(#{$direction}, rgb(#{$color}) 33%, hsl(from rgb(#{$color}) h s calc(l + 10)) 100%);
+}
+
+@mixin btn-gradient($direction: "to right") {
+  &.btn-primary {
+    &.disabled, &:disabled {
+      @include gradient($direction: $direction, $color: var(--primary-button-disabled-background-color));
+    }
+
+    &:not(.disabled):not(:disabled) {
+      @include gradient($direction: $direction, $color: var(--primary-button-regular-background-color));
+
+      &:hover {
+        @include gradient($direction: $direction, $color: var(--primary-button-active-background-color));
+      }
+    }
+  }
+
+  &.btn-outline-primary {
+    &:not(.disabled):not(:disabled) {
+      &:hover {
+        @include gradient($direction: $direction, $color: var(--primary-button-active-background-color));
+      }
+    }
+  }
+
+  &.btn-secondary {
+    &.disabled, &:disabled {
+      @include gradient($direction: $direction, $color: var(--secondary-button-disabled-background-color));
+    }
+
+    &:not(.disabled):not(:disabled) {
+      @include gradient($direction: $direction, $color: var(--secondary-button-regular-background-color));
+
+      &:hover {
+        @include gradient($direction: $direction, $color: var(--secondary-button-active-background-color));
+      }
+    }
+  }
+
+  &.btn-outline-secondary {
+    &:not(.disabled):not(:disabled) {
+      &:hover {
+        @include gradient($direction: $direction, $color: var(--secondary-button-active-background-color));
+      }
+    }
+  }
+}
+
+@mixin btn-animated-icon {
+  display: inline-flex;
+  font-family: inherit;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+
+  &:not(.disabled):not(:disabled) {
+    &:hover {
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+
+      i {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  i {
+    transition: all 0.3s;
+  }
+}
+
+@mixin btn-rounded-icon {
+  i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    border-radius: 50%;
+    margin-right: 0.5em;
+  }
+
+  div {
+    display: inline-flex;
+  }
+
+  &.btn-primary {
+    &.disabled, &:disabled {
+      i {
+        background-color: rgb(var(--primary-button-disabled-text-color));
+        color: rgb(var(--primary-button-disabled-background-color));
+      }
+    }
+
+    &:not(.disabled):not(:disabled) {
+      i {
+        background-color: rgb(var(--primary-button-regular-text-color));
+        color: rgb(var(--primary-button-regular-background-color));
+      }
+
+      &:hover {
+        i {
+          background-color: rgb(var(--primary-button-active-text-color));
+          color: rgb(var(--primary-button-active-background-color));
+        }
+      }
+    }
+  }
+
+  &.btn-outline-primary {
+    &.disabled, &:disabled {
+      i {
+        background-color: rgb(var(--primary-button-disabled-border-color));
+        color: rgb(var(--primary-button-active-text-color));
+      }
+    }
+
+    &:not(.disabled):not(:disabled) {
+      i {
+        background-color: rgb(var(--primary-button-active-border-color));
+        color: rgb(var(--primary-button-active-text-color));
+      }
+
+      &:hover {
+        i {
+          background-color: rgb(var(--primary-button-active-text-color));
+          color: rgb(var(--primary-button-active-background-color));
+        }
+      }
+    }
+  }
+
+  &.btn-secondary {
+    &.disabled, &:disabled {
+      i {
+        background-color: rgb(var(--secondary-button-disabled-text-color));
+        color: rgb(var(--secondary-button-disabled-background-color));
+      }
+    }
+
+    &:not(.disabled):not(:disabled) {
+      i {
+        background-color: rgb(var(--secondary-button-regular-text-color));
+        color: rgb(var(--secondary-button-regular-background-color));
+      }
+
+      &:hover {
+        i {
+          background-color: rgb(var(--secondary-button-active-text-color));
+          color: rgb(var(--secondary-button-active-background-color));
+        }
+      }
+    }
+  }
+
+  &.btn-outline-secondary {
+    &.disabled, &:disabled {
+      i {
+        background-color: rgb(var(--secondary-button-disabled-border-color));
+        color: rgb(var(--secondary-button-active-text-color));
+      }
+    }
+
+    &:not(.disabled):not(:disabled) {
+      i {
+        background-color: rgb(var(--secondary-button-regular-border-color));
+        color: rgb(var(--secondary-button-active-text-color));
+      }
+
+      &:hover {
+        i {
+          background-color: rgb(var(--secondary-button-active-text-color));
+          color: rgb(var(--secondary-button-active-background-color));
+        }
+      }
+    }
+  }
+}
+
+@mixin btn-animated-text {
+  line-height: 1rem;
+  appearance: none;
+  font-size: 1rem;
+  letter-spacing: .5px;
+
+  &:not(.disabled):not(:disabled) {
+    box-shadow: var(--shadow);
+    transition: transform .44s ease, box-shadow .44s ease;
+
+    &.btn-primary {
+      div {
+        text-shadow: 0 1rem 0 rgb(var(--primary-button-active-text-color));
+      }
+    }
+
+    &.btn-outline-primary {
+      div {
+        text-shadow: 0 1rem 0 rgb(var(--primary-button-active-text-color));
+      }
+    }
+
+    &.btn-secondary {
+      div {
+        text-shadow: 0 1rem 0 rgb(var(--secondary-button-active-text-color));
+      }
+    }
+
+    &.btn-outline-secondary {
+      div {
+        text-shadow: 0 1rem 0 rgb(var(--secondary-button-active-text-color));
+      }
+    }
+
+    div {
+      display: inline-flex;
+      overflow: hidden;
+
+      span {
+        display: inline-block;
+        transition: transform .44s ease;
+        transform: translateY(var(--m)) translateZ(0);
+
+        $i: 1;
+
+        @while $i < 100 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i / 30 + s;
+          }
+
+          $i: $i + 1;
+        }
+      }
+    }
+
+    &:hover {
+      span {
+        --m: calc(1rem * -1);
+      }
+    }
+  }
+}
+
+@mixin btn-shadow {
+  box-shadow: 0 4px 15px rgba(46, 46, 46, 0.15);
+}
+
+@mixin btn-rounded-corners($border-radius: 30) {
+  border-radius: $border-radius + px;
+}
+
+
+@mixin btn-animated-on-hover {
+  transition: all 0.3s;
+
+  &:not(.disabled):not(:disabled) {
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}

@@ -9,7 +9,7 @@ use Concrete\Core\Entity\Package as PackageEntity;
 class Controller extends Package
 {
     protected string $pkgHandle = 'simple_buttons';
-    protected string $pkgVersion = '0.0.5';
+    protected string $pkgVersion = '0.0.6';
     protected $appVersionRequired = '9.0.0';
     protected $pkgAutoloaderRegistries = [
         'src/Bitter/SimpleButtons' => 'Bitter\SimpleButtons',
@@ -17,7 +17,7 @@ class Controller extends Package
 
     public function getPackageDescription(): string
     {
-        return t('Add buttons and button groups to your site with more then 50 customizable styles.');
+        return t('Add buttons and button groups to your site with more than 50 customizable styles.');
     }
 
     public function getPackageName(): string
@@ -27,6 +27,10 @@ class Controller extends Package
 
     public function on_start()
     {
+        $autoloadFile = $this->getPackagePath() . DIRECTORY_SEPARATOR . "vendor" . DIRECTORY_SEPARATOR . "autoload.php";
+
+        include($autoloadFile);
+        
         /** @var ServiceProvider $serviceProvider */
         /** @noinspection PhpUnhandledExceptionInspection */
         $serviceProvider = $this->app->make(ServiceProvider::class);

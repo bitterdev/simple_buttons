@@ -16,5 +16,8 @@
         <page name="Colors" path="/dashboard/simple_buttons/colors"
               filename="/dashboard/simple_buttons/colors.php"
               package="simple_buttons"/>
+        <page name="Styles" path="/dashboard/simple_buttons/styles"
+              filename="/dashboard/simple_buttons/styles.php"
+              package="simple_buttons"/>
     </singlepages>
 </concrete5-cif>

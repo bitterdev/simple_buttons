@@ -88,8 +88,8 @@ class Colors extends DashboardPageController
         $this->set("primaryButtonRegularBackgroundColor", (string)$config->get("simple_buttons.styles.primary.states.regular.colors.background", "#0d6efd"));
         $this->set("primaryButtonRegularBorderColor", (string)$config->get("simple_buttons.styles.primary.states.regular.colors.border", "#0d6efd"));
         $this->set("primaryButtonDisabledTextColor", (string)$config->get("simple_buttons.styles.primary.states.disabled.colors.text", "#fff"));
-        $this->set("primaryButtonDisabledBackgroundColor", (string)$config->get("simple_buttons.styles.primary.states.disabled.colors.background", "#0d6efd"));
-        $this->set("primaryButtonDisabledBorderColor", (string)$config->get("simple_buttons.styles.primary.states.disabled.colors.border", "#0d6efd"));
+        $this->set("primaryButtonDisabledBackgroundColor", (string)$config->get("simple_buttons.styles.primary.states.disabled.colors.background", "#71acff"));
+        $this->set("primaryButtonDisabledBorderColor", (string)$config->get("simple_buttons.styles.primary.states.disabled.colors.border", "#71acff"));
         $this->set("primaryButtonActiveTextColor", (string)$config->get("simple_buttons.styles.primary.states.active.colors.text", "#fff"));
         $this->set("primaryButtonActiveBackgroundColor", (string)$config->get("simple_buttons.styles.primary.states.active.colors.background", "#0b5ed7"));
         $this->set("primaryButtonActiveBorderColor", (string)$config->get("simple_buttons.styles.primary.states.active.colors.border", "#0a58ca"));
@@ -97,8 +97,8 @@ class Colors extends DashboardPageController
         $this->set("secondaryButtonRegularBackgroundColor", (string)$config->get("simple_buttons.styles.secondary.states.regular.colors.background", "#6c757d"));
         $this->set("secondaryButtonRegularBorderColor", (string)$config->get("simple_buttons.styles.secondary.states.regular.colors.border", "#6c757d"));
         $this->set("secondaryButtonDisabledTextColor", (string)$config->get("simple_buttons.styles.secondary.states.disabled.colors.text", "#fff"));
-        $this->set("secondaryButtonDisabledBackgroundColor", (string)$config->get("simple_buttons.styles.secondary.states.disabled.colors.background", "#6c757d"));
-        $this->set("secondaryButtonDisabledBorderColor", (string)$config->get("simple_buttons.styles.secondary.states.disabled.colors.border", "#6c757d"));
+        $this->set("secondaryButtonDisabledBackgroundColor", (string)$config->get("simple_buttons.styles.secondary.states.disabled.colors.background", "#a2a8ad"));
+        $this->set("secondaryButtonDisabledBorderColor", (string)$config->get("simple_buttons.styles.secondary.states.disabled.colors.border", "#a2a8ad"));
         $this->set("secondaryButtonActiveTextColor", (string)$config->get("simple_buttons.styles.secondary.states.active.colors.text", "#fff"));
         $this->set("secondaryButtonActiveBackgroundColor", (string)$config->get("simple_buttons.styles.secondary.states.active.colors.background", "#5c636a"));
         $this->set("secondaryButtonActiveBorderColor", (string)$config->get("simple_buttons.styles.secondary.states.active.colors.border", "#565e64"));

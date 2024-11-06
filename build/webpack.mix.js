@@ -11,13 +11,14 @@ mix.webpackConfig({
 });
 
 mix.setResourceRoot('./');
-mix.setPublicPath('../css');
+mix.setPublicPath('../');
 
 mix
-    .sass('./assets/styles/main.scss', '../css/simple-buttons.css', {
+    .sass('./assets/simple-buttons/scss/main.scss', '../css/simple-buttons.css', {
         sassOptions: {
             includePaths: [
                 path.resolve(__dirname, './node_modules/')
             ]
         }
     })
+    .js('./assets/simple-buttons/js/main.js', '../js/simple-buttons.js')
