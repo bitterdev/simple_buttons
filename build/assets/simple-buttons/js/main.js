@@ -1,5 +1,7 @@
 (function ($) {
     $(function () {
+
+
         $(".btn").each(function () {
             let $btn = $(this), $i = null, iconPosition, btnText = $btn.text().trim();
 
@@ -40,6 +42,31 @@
 
                 $btn.addClass("btn-processed-text")
             }
+
+            $btn.append($("<div/>").addClass("hover-glow").css({display: "none"}));
+
+            $btn.on({
+                'mousemove': function (e) {
+                    if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
+                        let x = e.pageX - $btn.offset().left;
+                        let y = e.pageY - $btn.offset().top;
+
+                        $btn.find('.hover-glow').css({
+                            'display': 'block',
+                            'transform': 'translate(' + x + 'px,' + y + 'px)',
+                            'opacity': 1
+                        });
+                    }
+                },
+                'mouseleave': function () {
+                    if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
+                        $btn.find('.hover-glow').css({
+                            'opacity': 0
+                        });
+                    }
+                }
+            })
+
         });
     });
 })(jQuery);

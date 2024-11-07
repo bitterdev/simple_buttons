@@ -41,6 +41,29 @@
         }
         $btn.addClass("btn-processed-text");
       }
+      $btn.append($("<div/>").addClass("hover-glow").css({
+        display: "none"
+      }));
+      $btn.on({
+        'mousemove': function mousemove(e) {
+          if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
+            var x = e.pageX - $btn.offset().left;
+            var y = e.pageY - $btn.offset().top;
+            $btn.find('.hover-glow').css({
+              'display': 'block',
+              'transform': 'translate(' + x + 'px,' + y + 'px)',
+              'opacity': 1
+            });
+          }
+        },
+        'mouseleave': function mouseleave() {
+          if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
+            $btn.find('.hover-glow').css({
+              'opacity': 0
+            });
+          }
+        }
+      });
     });
   });
 })(jQuery);

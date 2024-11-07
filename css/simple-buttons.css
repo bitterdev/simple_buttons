@@ -1,3 +1,90 @@
+:root {
+  --button-glow-effect-size: 150px;
+  --button-small-font-size: 1em;
+  --button-small-height: 0.8rem;
+  --button-small-line-height: 1em;
+  --button-small-letter-spacing: .5px;
+  --button-small-padding-top: 0.8rem;
+  --button-small-padding-bottom: 0.8rem;
+  --button-small-padding-left: 0.8rem;
+  --button-small-padding-right: 0.8rem;
+  --button-small-border-width: 1px;
+  --button-small-margin-top: 0px;
+  --button-small-margin-bottom: 1rem;
+  --button-small-margin-left: 0px;
+  --button-small-margin-right: 0px;
+  --button-small-icon-line-height: 2.4rem;
+  --button-small-icon-font-size: 1em;
+  --button-small-icon-width: 2.4rem;
+  --button-small-icon-height: 2.4rem;
+  --button-small-icon-padding-top: 0px;
+  --button-small-icon-padding-bottom: 0px;
+  --button-small-icon-padding-left: 0px;
+  --button-small-icon-padding-right: 0px;
+  --button-small-icon-margin-top: 0px;
+  --button-small-icon-margin-bottom: 0px;
+  --button-small-icon-margin-left: 0px;
+  --button-small-icon-margin-right: 0px;
+  --button-regular-font-size: 1em;
+  --button-regular-height: 0.9rem;
+  --button-regular-line-height: 1em;
+  --button-regular-letter-spacing: .5px;
+  --button-regular-padding-top: 0.9rem;
+  --button-regular-padding-bottom: 0.9rem;
+  --button-regular-padding-left: 0.9rem;
+  --button-regular-padding-right: 0.9rem;
+  --button-regular-border-width: 1px;
+  --button-regular-margin-top: 0px;
+  --button-regular-margin-bottom: 1rem;
+  --button-regular-margin-left: 0px;
+  --button-regular-margin-right: 0px;
+  --button-regular-icon-line-height: 2.7rem;
+  --button-regular-icon-font-size: 1em;
+  --button-regular-icon-width: 2.7rem;
+  --button-regular-icon-height: 2.7rem;
+  --button-regular-icon-padding-top: 0px;
+  --button-regular-icon-padding-bottom: 0px;
+  --button-regular-icon-padding-left: 0px;
+  --button-regular-icon-padding-right: 0px;
+  --button-regular-icon-margin-top: 0px;
+  --button-regular-icon-margin-bottom: 0px;
+  --button-regular-icon-margin-left: 0px;
+  --button-regular-icon-margin-right: 0px;
+  --button-large-font-size: 1em;
+  --button-large-height: 1rem;
+  --button-large-line-height: 1em;
+  --button-large-letter-spacing: .5px;
+  --button-large-padding-top: 1rem;
+  --button-large-padding-bottom: 1rem;
+  --button-large-padding-left: 1rem;
+  --button-large-padding-right: 1rem;
+  --button-large-border-width: 1px;
+  --button-large-margin-top: 0px;
+  --button-large-margin-bottom: 1rem;
+  --button-large-margin-left: 0px;
+  --button-large-margin-right: 0px;
+  --button-large-icon-line-height: 3rem;
+  --button-large-icon-font-size: 1em;
+  --button-large-icon-width: 3rem;
+  --button-large-icon-height: 3rem;
+  --button-large-icon-padding-top: 0px;
+  --button-large-icon-padding-bottom: 0px;
+  --button-large-icon-padding-left: 0px;
+  --button-large-icon-padding-right: 0px;
+  --button-large-icon-margin-top: 0px;
+  --button-large-icon-margin-bottom: 0px;
+  --button-large-icon-margin-left: 0px;
+  --button-large-icon-margin-right: 0px;
+}
+
+.ccm-page, .ccm-btn-preview-container {
+  /***
+   * Input Group Styles
+   */
+  /***
+   * Base Style
+   */
+}
 .ccm-page .input-group, .ccm-btn-preview-container .input-group {
   align-items: stretch;
   display: flex;
@@ -12,97 +99,133 @@
 .ccm-page .btn, .ccm-btn-preview-container .btn {
   all: initial;
   font-family: inherit;
-  display: inline-block;
-  font-size: 1em;
+  display: inline-flex;
   cursor: pointer;
-  padding: 1rem 1rem;
-  border: 1px solid transparent;
+  font-size: var(--button-regular-font-size);
+  margin: var(--button-regular-margin-top) var(--button-regular-margin-right) var(--button-regular-margin-bottom) var(--button-regular-margin-left);
+  border: var(--button-regular-border-width) solid transparent;
+  height: calc(var(--button-regular-padding-top) + var(--button-regular-height) + var(--button-regular-padding-bottom));
+  letter-spacing: var(--button-regular-letter-spacing);
   outline: none;
-  margin-bottom: 1rem;
   position: relative;
-  line-height: 1rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  letter-spacing: 0.5px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
 }
 .ccm-page .btn .label, .ccm-btn-preview-container .btn .label {
-  display: inline-block;
-  min-height: 1rem;
-}
-.ccm-page .btn.btn-has-icon i, .ccm-btn-preview-container .btn.btn-has-icon i {
-  margin-right: 0.5rem;
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-  text-align: center;
-}
-.ccm-page .btn.btn-has-icon i::before, .ccm-btn-preview-container .btn.btn-has-icon i::before {
-  line-height: 1rem;
-}
-.ccm-page .btn.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-has-icon .label {
-  display: inline-block;
-  width: calc(100% - 1.5rem);
+  display: inline-table;
+  height: var(--button-regular-height);
+  line-height: var(--button-regular-line-height);
+  font-size: var(--button-regular-font-size);
+  margin: var(--button-regular-padding-top) var(--button-regular-padding-right) var(--button-regular-padding-bottom) var(--button-regular-padding-left);
+  width: calc(100% - var(--button-regular-padding-right) - var(--button-regular-padding-left));
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 1rem;
 }
-.ccm-page .btn.btn-has-icon:active, .ccm-btn-preview-container .btn.btn-has-icon:active {
+.ccm-page .btn:active, .ccm-btn-preview-container .btn:active {
   box-shadow: none;
-}
-.ccm-page .btn.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-right i {
-  right: 0.5rem;
-}
-.ccm-page .btn.btn-has-icon.btn-icon-right .label, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-right .label {
-  margin-right: 1.5rem;
-}
-.ccm-page .btn.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left i {
-  left: 1rem;
-}
-.ccm-page .btn.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left .label {
-  margin-left: 1.5rem;
-}
-.ccm-page .btn.btn-sm, .ccm-btn-preview-container .btn.btn-sm {
-  padding: 0.5rem 1rem;
-  font-size: 0.8em;
-}
-.ccm-page .btn.btn-sm.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon .label {
-  width: calc(100% - 0.75rem);
-}
-.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-right i {
-  right: 0;
-}
-.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-right .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-right .label {
-  margin-right: 0.75rem;
-}
-.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-left i {
-  left: 0.5rem;
-}
-.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-left .label {
-  margin-left: 0.75rem;
-}
-.ccm-page .btn.btn-lg, .ccm-btn-preview-container .btn.btn-lg {
-  padding: 1.5rem 1.5rem;
-  font-size: 1.1em;
-}
-.ccm-page .btn.btn-lg.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon .label {
-  width: calc(100% - 2rem);
-}
-.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-right i {
-  right: 1.5rem;
-}
-.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-right .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-right .label {
-  margin-right: 2rem;
-}
-.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-left i {
-  left: 1.5rem;
-}
-.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-left .label {
-  margin-left: 2rem;
 }
 .ccm-page .btn.disabled, .ccm-page .btn:disabled, .ccm-btn-preview-container .btn.disabled, .ccm-btn-preview-container .btn:disabled {
   cursor: not-allowed;
+}
+.ccm-page .btn.btn-has-icon i, .ccm-btn-preview-container .btn.btn-has-icon i {
+  margin: var(--button-regular-icon-margin-top) var(--button-regular-icon-margin-right) var(--button-regular-icon-margin-bottom) var(--button-regular-icon-margin-left);
+  padding: var(--button-regular-icon-padding-top) var(--button-regular-icon-padding-right) var(--button-regular-icon-padding-bottom) var(--button-regular-icon-padding-left);
+  width: var(--button-regular-icon-width);
+  height: var(--button-regular-icon-height);
+  top: 0;
+  position: absolute;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.ccm-page .btn.btn-has-icon i::before, .ccm-btn-preview-container .btn.btn-has-icon i::before {
+  line-height: var(--button-regular-icon-line-height);
+  font-size: var(--button-regular-icon-font-size);
+}
+.ccm-page .btn.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-has-icon .label {
+  display: inline-block;
+  width: calc(100% - var(--button-regular-icon-width) - var(--button-regular-icon-margin-left) - var(--button-regular-icon-padding-left) - var(--button-regular-icon-padding-right) - var(--button-regular-icon-margin-right) - var(--button-regular-padding-right) - var(--button-regular-padding-left));
+}
+.ccm-page .btn.btn-has-icon.btn-icon-right, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-right {
+  text-align: right;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-right i, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-right i {
+  right: 0;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-left, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left {
+  text-align: left;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-left i, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left i {
+  left: 0;
+}
+.ccm-page .btn.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-has-icon.btn-icon-left .label {
+  margin-left: calc(var(--button-regular-icon-width) + var(--button-regular-icon-margin-left) + var(--button-regular-icon-padding-left) + var(--button-regular-icon-padding-right) + var(--button-regular-icon-margin-right) + var(--button-regular-padding-left));
+}
+.ccm-page .btn.btn-sm, .ccm-btn-preview-container .btn.btn-sm {
+  font-size: var(--button-small-font-size);
+  margin: var(--button-small-margin-top) var(--button-small-margin-right) var(--button-small-margin-bottom) var(--button-small-margin-left);
+  border-width: var(--button-small-border-width);
+  letter-spacing: var(--button-small-letter-spacing);
+  height: calc(var(--button-small-padding-top) + var(--button-small-height) + var(--button-small-padding-bottom));
+}
+.ccm-page .btn.btn-sm .label, .ccm-btn-preview-container .btn.btn-sm .label {
+  height: var(--button-small-height);
+  line-height: var(--button-small-line-height);
+  font-size: var(--button-small-font-size);
+  margin: var(--button-small-padding-top) var(--button-small-padding-right) var(--button-small-padding-bottom) var(--button-small-padding-left);
+  width: calc(100% - var(--button-small-padding-right) - var(--button-small-padding-left));
+}
+.ccm-page .btn.btn-sm.btn-has-icon i, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon i {
+  margin: var(--button-small-icon-margin-top) var(--button-small-icon-margin-right) var(--button-small-icon-margin-bottom) var(--button-small-icon-margin-left);
+  padding: var(--button-small-icon-padding-top) var(--button-small-icon-padding-right) var(--button-small-icon-padding-bottom) var(--button-small-icon-padding-left);
+  width: var(--button-small-icon-width);
+  height: var(--button-small-icon-height);
+}
+.ccm-page .btn.btn-sm.btn-has-icon i::before, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon i::before {
+  line-height: var(--button-small-icon-line-height);
+  font-size: var(--button-small-icon-font-size);
+}
+.ccm-page .btn.btn-sm.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon .label {
+  width: calc(100% - var(--button-small-icon-width) - var(--button-small-icon-margin-left) - var(--button-small-icon-padding-left) - var(--button-small-icon-padding-right) - var(--button-small-icon-margin-right) - var(--button-small-padding-right) - var(--button-small-padding-left));
+}
+.ccm-page .btn.btn-sm.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-sm.btn-has-icon.btn-icon-left .label {
+  margin-left: calc(var(--button-small-icon-width) + var(--button-small-icon-margin-left) + var(--button-small-icon-padding-left) + var(--button-small-icon-padding-right) + var(--button-small-icon-margin-right) + var(--button-small-padding-left));
+}
+.ccm-page .btn.btn-lg, .ccm-btn-preview-container .btn.btn-lg {
+  font-size: var(--button-large-font-size);
+  margin: var(--button-large-margin-top) var(--button-large-margin-right) var(--button-large-margin-bottom) var(--button-large-margin-left);
+  border-width: var(--button-large-border-width);
+  letter-spacing: var(--button-large-letter-spacing);
+  height: calc(var(--button-large-padding-top) + var(--button-large-height) + var(--button-large-padding-bottom));
+}
+.ccm-page .btn.btn-lg .label, .ccm-btn-preview-container .btn.btn-lg .label {
+  height: var(--button-large-height);
+  line-height: var(--button-large-line-height);
+  font-size: var(--button-large-font-size);
+  margin: var(--button-large-padding-top) var(--button-large-padding-right) var(--button-large-padding-bottom) var(--button-large-padding-left);
+  width: calc(100% - var(--button-large-padding-right) - var(--button-large-padding-left));
+}
+.ccm-page .btn.btn-lg.btn-has-icon i, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon i {
+  margin: var(--button-large-icon-margin-top) var(--button-large-icon-margin-right) var(--button-large-icon-margin-bottom) var(--button-large-icon-margin-left);
+  padding: var(--button-large-icon-padding-top) var(--button-large-icon-padding-right) var(--button-large-icon-padding-bottom) var(--button-large-icon-padding-left);
+  width: var(--button-large-icon-width);
+  height: var(--button-large-icon-height);
+}
+.ccm-page .btn.btn-lg.btn-has-icon i::before, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon i::before {
+  line-height: var(--button-large-icon-line-height);
+  font-size: var(--button-large-icon-font-size);
+}
+.ccm-page .btn.btn-lg.btn-has-icon .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon .label {
+  width: calc(100% - var(--button-large-icon-width) - var(--button-large-icon-margin-left) - var(--button-large-icon-padding-left) - var(--button-large-icon-padding-right) - var(--button-large-icon-margin-right) - var(--button-large-padding-right) - var(--button-large-padding-left));
+}
+.ccm-page .btn.btn-lg.btn-has-icon.btn-icon-left .label, .ccm-btn-preview-container .btn.btn-lg.btn-has-icon.btn-icon-left .label {
+  margin-left: calc(var(--button-large-icon-width) + var(--button-large-icon-margin-left) + var(--button-large-icon-padding-left) + var(--button-large-icon-padding-right) + var(--button-large-icon-margin-right) + var(--button-large-padding-left));
 }
 .ccm-page .btn.btn-primary.disabled, .ccm-page .btn.btn-primary:disabled, .ccm-btn-preview-container .btn.btn-primary.disabled, .ccm-btn-preview-container .btn.btn-primary:disabled {
   color: rgb(var(--primary-button-disabled-text-color));
@@ -162,6 +285,26 @@
   background-color: rgb(var(--secondary-button-active-background-color));
   border-color: rgb(var(--secondary-button-active-border-color));
 }
+.ccm-page .btn, .ccm-btn-preview-container .btn {
+  /***
+   * Rounded Corners
+   */
+  /***
+   * Shadow
+   */
+  /***
+   * Gradient Styles
+   */
+  /***
+   * Icon Styles
+   */
+  /***
+   * Text Styles
+   */
+  /***
+   * Animations
+   */
+}
 .ccm-page .btn.btn-rounded-corners-5, .ccm-btn-preview-container .btn.btn-rounded-corners-5 {
   border-radius: 5px;
 }
@@ -178,34 +321,34 @@
   border-radius: 25px;
 }
 .ccm-page .btn.btn-shadow-style-1, .ccm-btn-preview-container .btn.btn-shadow-style-1 {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 .ccm-page .btn.btn-shadow-style-2, .ccm-btn-preview-container .btn.btn-shadow-style-2 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 .ccm-page .btn.btn-shadow-style-3, .ccm-btn-preview-container .btn.btn-shadow-style-3 {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .ccm-page .btn.btn-shadow-style-4, .ccm-btn-preview-container .btn.btn-shadow-style-4 {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 .ccm-page .btn.btn-shadow-style-5, .ccm-btn-preview-container .btn.btn-shadow-style-5 {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 .ccm-page .btn.btn-shadow-style-6, .ccm-btn-preview-container .btn.btn-shadow-style-6 {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 .ccm-page .btn.btn-shadow-style-7, .ccm-btn-preview-container .btn.btn-shadow-style-7 {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
 .ccm-page .btn.btn-shadow-style-8, .ccm-btn-preview-container .btn.btn-shadow-style-8 {
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
 }
 .ccm-page .btn.btn-shadow-style-9, .ccm-btn-preview-container .btn.btn-shadow-style-9 {
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
 }
 .ccm-page .btn.btn-shadow-style-10, .ccm-btn-preview-container .btn.btn-shadow-style-10 {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
 }
 .ccm-page .btn.btn-gradient-direction-right.btn-primary.disabled, .ccm-page .btn.btn-gradient-direction-right.btn-primary:disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-primary.disabled, .ccm-btn-preview-container .btn.btn-gradient-direction-right.btn-primary:disabled {
   background: linear-gradient(to right, rgb(var(--primary-button-disabled-background-color)) 33%, hsl(from rgb(var(--primary-button-disabled-background-color)) h s calc(l + 10)) 100%);
@@ -303,406 +446,518 @@
 .ccm-page .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-gradient-direction-bottom.btn-outline-secondary:not(.disabled):not(:disabled):active {
   background: linear-gradient(to bottom, rgb(var(--secondary-button-active-background-color)) 33%, hsl(from rgb(var(--secondary-button-active-background-color)) h s calc(l + 10)) 100%);
 }
-.ccm-page .btn.btn-rounded-icon i, .ccm-btn-preview-container .btn.btn-rounded-icon i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1em;
-  height: 1em;
-  line-height: 1em;
+.ccm-page .btn.btn-icon-rounded-background.btn-has-icon i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-has-icon i {
   border-radius: 50%;
+  margin: 9px !important;
+  width: calc(var(--button-regular-icon-width) - 17px) !important;
+  height: calc(var(--button-regular-icon-height) - 17px) !important;
 }
-.ccm-page .btn.btn-rounded-icon i::before, .ccm-btn-preview-container .btn.btn-rounded-icon i::before {
-  font-size: 0.6em;
+.ccm-page .btn.btn-icon-rounded-background.btn-has-icon i::before, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-has-icon i::before {
+  line-height: calc(var(--button-regular-icon-height) - 17px) !important;
 }
-.ccm-page .btn.btn-rounded-icon.btn-primary.disabled i, .ccm-page .btn.btn-rounded-icon.btn-primary:disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary.disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:disabled i {
+.ccm-page .btn.btn-icon-rounded-background.btn-has-icon.btn-sm i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-has-icon.btn-sm i {
+  border-radius: 50%;
+  margin: 8px !important;
+  width: calc(var(--button-regular-icon-width) - 20px) !important;
+  height: calc(var(--button-regular-icon-height) - 20px) !important;
+}
+.ccm-page .btn.btn-icon-rounded-background.btn-has-icon.btn-sm i::before, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-has-icon.btn-sm i::before {
+  line-height: calc(var(--button-regular-icon-height) - 20px) !important;
+}
+.ccm-page .btn.btn-icon-rounded-background.btn-has-icon.btn-lg i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-has-icon.btn-lg i {
+  border-radius: 50%;
+  margin: 10px !important;
+  width: calc(var(--button-regular-icon-width) - 15px) !important;
+  height: calc(var(--button-regular-icon-height) - 15px) !important;
+}
+.ccm-page .btn.btn-icon-rounded-background.btn-has-icon.btn-lg i::before, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-has-icon.btn-lg i::before {
+  line-height: calc(var(--button-regular-icon-height) - 15px) !important;
+}
+.ccm-page .btn.btn-icon-square-background.btn-primary.disabled i, .ccm-page .btn.btn-icon-square-background.btn-primary:disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-primary.disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-primary:disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-primary.disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-primary:disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-primary.disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-primary:disabled i {
   background-color: rgb(var(--primary-button-disabled-text-color));
   color: rgb(var(--primary-button-disabled-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled) i {
+.ccm-page .btn.btn-icon-square-background.btn-primary:not(.disabled):not(:disabled) i, .ccm-page .btn.btn-icon-rounded-background.btn-primary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-primary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-primary:not(.disabled):not(:disabled) i {
   background-color: rgb(var(--primary-button-regular-text-color));
   color: rgb(var(--primary-button-regular-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-primary:not(.disabled):not(:disabled):active i {
+.ccm-page .btn.btn-icon-square-background.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-square-background.btn-primary:not(.disabled):not(:disabled):active i, .ccm-page .btn.btn-icon-rounded-background.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-rounded-background.btn-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-primary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--primary-button-active-text-color));
   color: rgb(var(--primary-button-active-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-primary.disabled i, .ccm-page .btn.btn-rounded-icon.btn-outline-primary:disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary.disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:disabled i {
+.ccm-page .btn.btn-icon-square-background.btn-outline-primary.disabled i, .ccm-page .btn.btn-icon-square-background.btn-outline-primary:disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-primary.disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-primary:disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-primary.disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-primary:disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-primary.disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-primary:disabled i {
   background-color: rgb(var(--primary-button-disabled-border-color));
   color: rgb(var(--primary-button-active-text-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled) i {
+.ccm-page .btn.btn-icon-square-background.btn-outline-primary:not(.disabled):not(:disabled) i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-primary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-primary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-primary:not(.disabled):not(:disabled) i {
   background-color: rgb(var(--primary-button-active-border-color));
   color: rgb(var(--primary-button-active-text-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-primary:not(.disabled):not(:disabled):active i {
+.ccm-page .btn.btn-icon-square-background.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-square-background.btn-outline-primary:not(.disabled):not(:disabled):active i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-primary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-primary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-primary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--primary-button-active-text-color));
   color: rgb(var(--primary-button-active-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-secondary.disabled i, .ccm-page .btn.btn-rounded-icon.btn-secondary:disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary.disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:disabled i {
+.ccm-page .btn.btn-icon-square-background.btn-secondary.disabled i, .ccm-page .btn.btn-icon-square-background.btn-secondary:disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-secondary.disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-secondary:disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-secondary.disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-secondary:disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-secondary.disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-secondary:disabled i {
   background-color: rgb(var(--secondary-button-disabled-text-color));
   color: rgb(var(--secondary-button-disabled-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled) i {
+.ccm-page .btn.btn-icon-square-background.btn-secondary:not(.disabled):not(:disabled) i, .ccm-page .btn.btn-icon-rounded-background.btn-secondary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-secondary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-secondary:not(.disabled):not(:disabled) i {
   background-color: rgb(var(--secondary-button-regular-text-color));
   color: rgb(var(--secondary-button-regular-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-secondary:not(.disabled):not(:disabled):active i {
+.ccm-page .btn.btn-icon-square-background.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-square-background.btn-secondary:not(.disabled):not(:disabled):active i, .ccm-page .btn.btn-icon-rounded-background.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-rounded-background.btn-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-secondary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--secondary-button-active-text-color));
   color: rgb(var(--secondary-button-active-background-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-secondary.disabled i, .ccm-page .btn.btn-rounded-icon.btn-outline-secondary:disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary.disabled i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:disabled i {
+.ccm-page .btn.btn-icon-square-background.btn-outline-secondary.disabled i, .ccm-page .btn.btn-icon-square-background.btn-outline-secondary:disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-secondary.disabled i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-secondary:disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-secondary.disabled i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-secondary:disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-secondary.disabled i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-secondary:disabled i {
   background-color: rgb(var(--secondary-button-disabled-border-color));
   color: rgb(var(--secondary-button-active-text-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled) i {
+.ccm-page .btn.btn-icon-square-background.btn-outline-secondary:not(.disabled):not(:disabled) i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-secondary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-secondary:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-secondary:not(.disabled):not(:disabled) i {
   background-color: rgb(var(--secondary-button-regular-border-color));
   color: rgb(var(--secondary-button-active-text-color));
 }
-.ccm-page .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-rounded-icon.btn-outline-secondary:not(.disabled):not(:disabled):active i {
+.ccm-page .btn.btn-icon-square-background.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-square-background.btn-outline-secondary:not(.disabled):not(:disabled):active i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-icon-rounded-background.btn-outline-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-square-background.btn-outline-secondary:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-secondary:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-icon-rounded-background.btn-outline-secondary:not(.disabled):not(:disabled):active i {
   background-color: rgb(var(--secondary-button-active-text-color));
   color: rgb(var(--secondary-button-active-background-color));
 }
-.ccm-page .btn.btn-animated-icon, .ccm-btn-preview-container .btn.btn-animated-icon {
-  display: inline-flex;
-  font-family: inherit;
-  align-items: center;
-  justify-content: center;
+.ccm-page .btn.btn-font-weight-100, .ccm-btn-preview-container .btn.btn-font-weight-100 {
+  font-weight: 100;
+}
+.ccm-page .btn.btn-font-weight-200, .ccm-btn-preview-container .btn.btn-font-weight-200 {
+  font-weight: 200;
+}
+.ccm-page .btn.btn-font-weight-300, .ccm-btn-preview-container .btn.btn-font-weight-300 {
+  font-weight: 300;
+}
+.ccm-page .btn.btn-font-weight-400, .ccm-btn-preview-container .btn.btn-font-weight-400 {
+  font-weight: 400;
+}
+.ccm-page .btn.btn-font-weight-500, .ccm-btn-preview-container .btn.btn-font-weight-500 {
+  font-weight: 500;
+}
+.ccm-page .btn.btn-font-weight-600, .ccm-btn-preview-container .btn.btn-font-weight-600 {
+  font-weight: 600;
+}
+.ccm-page .btn.btn-font-weight-700, .ccm-btn-preview-container .btn.btn-font-weight-700 {
+  font-weight: 700;
+}
+.ccm-page .btn.btn-font-weight-800, .ccm-btn-preview-container .btn.btn-font-weight-800 {
+  font-weight: 800;
+}
+.ccm-page .btn.btn-font-weight-900, .ccm-btn-preview-container .btn.btn-font-weight-900 {
+  font-weight: 900;
+}
+.ccm-page .btn.btn-text-uppercase, .ccm-btn-preview-container .btn.btn-text-uppercase {
+  text-transform: uppercase;
+}
+.ccm-page .btn.btn-hover-animation-1, .ccm-btn-preview-container .btn.btn-hover-animation-1 {
   transition: all 0.3s;
 }
-.ccm-page .btn.btn-animated-icon:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-animated-icon:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-animated-icon:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-animated-icon:not(.disabled):not(:disabled):active i {
-  transform: rotate(45deg);
+.ccm-page .btn.btn-hover-animation-1:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-hover-animation-1:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-hover-animation-1:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-hover-animation-1:not(.disabled):not(:disabled):active {
+  transform: translateY(-3px);
 }
-.ccm-page .btn.btn-animated-icon i, .ccm-btn-preview-container .btn.btn-animated-icon i {
-  transition: all 0.3s;
-}
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) {
   transition: transform 0.44s ease, box-shadow 0.44s ease;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled).btn-primary div, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled).btn-primary div {
-  text-shadow: 0 1rem 0 rgb(var(--primary-button-active-text-color));
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-primary div, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-outline-primary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-primary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-outline-primary div {
+  text-shadow: 0 var(--button-small-height) 0 rgb(var(--primary-button-active-text-color));
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled).btn-outline-primary div, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled).btn-outline-primary div {
-  text-shadow: 0 1rem 0 rgb(var(--primary-button-active-text-color));
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-secondary div, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-outline-secondary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-secondary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm.btn-outline-secondary div {
+  text-shadow: 0 var(--button-small-height) 0 rgb(var(--secondary-button-active-text-color));
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled).btn-secondary div, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled).btn-secondary div {
-  text-shadow: 0 1rem 0 rgb(var(--secondary-button-active-text-color));
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm div:hover span, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm div:active span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm div:hover span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-sm div:active span {
+  --m: calc(var(--button-small-height) * -1);
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled).btn-outline-secondary div, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled).btn-outline-secondary div {
-  text-shadow: 0 1rem 0 rgb(var(--secondary-button-active-text-color));
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-primary div, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-outline-primary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-primary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-outline-primary div {
+  text-shadow: 0 var(--button-large-height) 0 rgb(var(--primary-button-active-text-color));
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-secondary div, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-outline-secondary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-secondary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg.btn-outline-secondary div {
+  text-shadow: 0 var(--button-large-height) 0 rgb(var(--secondary-button-active-text-color));
+}
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg div:hover span, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg div:active span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg div:hover span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-lg div:active span {
+  --m: calc(var(--button-large-height) * -1);
+}
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-primary div, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-outline-primary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-primary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-outline-primary div {
+  text-shadow: 0 var(--button-regular-height) 0 rgb(var(--primary-button-active-text-color));
+}
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-secondary div, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-outline-secondary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-secondary div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled).btn-outline-secondary div {
+  text-shadow: 0 var(--button-regular-height) 0 rgb(var(--secondary-button-active-text-color));
+}
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div {
   display: inline-flex;
   overflow: hidden;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span {
   display: inline-block;
-  transition: transform 0.44s ease;
+  transition: transform 0.24s ease;
   transform: translateY(var(--m)) translateZ(0);
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(1), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(1) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(1), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(1) {
   transition-delay: 0.0333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(2), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(2) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(2), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(2) {
   transition-delay: 0.0666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(3), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(3) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(3), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(3) {
   transition-delay: 0.1s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(4), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(4) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(4), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(4) {
   transition-delay: 0.1333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(5), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(5) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(5), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(5) {
   transition-delay: 0.1666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(6), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(6) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(6), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(6) {
   transition-delay: 0.2s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(7), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(7) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(7), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(7) {
   transition-delay: 0.2333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(8), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(8) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(8), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(8) {
   transition-delay: 0.2666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(9), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(9) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(9), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(9) {
   transition-delay: 0.3s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(10), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(10) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(10), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(10) {
   transition-delay: 0.3333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(11), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(11) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(11), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(11) {
   transition-delay: 0.3666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(12), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(12) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(12), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(12) {
   transition-delay: 0.4s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(13), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(13) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(13), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(13) {
   transition-delay: 0.4333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(14), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(14) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(14), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(14) {
   transition-delay: 0.4666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(15), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(15) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(15), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(15) {
   transition-delay: 0.5s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(16), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(16) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(16), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(16) {
   transition-delay: 0.5333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(17), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(17) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(17), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(17) {
   transition-delay: 0.5666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(18), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(18) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(18), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(18) {
   transition-delay: 0.6s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(19), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(19) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(19), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(19) {
   transition-delay: 0.6333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(20), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(20) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(20), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(20) {
   transition-delay: 0.6666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(21), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(21) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(21), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(21) {
   transition-delay: 0.7s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(22), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(22) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(22), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(22) {
   transition-delay: 0.7333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(23), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(23) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(23), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(23) {
   transition-delay: 0.7666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(24), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(24) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(24), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(24) {
   transition-delay: 0.8s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(25), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(25) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(25), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(25) {
   transition-delay: 0.8333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(26), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(26) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(26), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(26) {
   transition-delay: 0.8666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(27), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(27) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(27), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(27) {
   transition-delay: 0.9s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(28), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(28) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(28), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(28) {
   transition-delay: 0.9333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(29), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(29) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(29), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(29) {
   transition-delay: 0.9666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(30), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(30) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(30), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(30) {
   transition-delay: 1s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(31), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(31) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(31), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(31) {
   transition-delay: 1.0333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(32), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(32) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(32), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(32) {
   transition-delay: 1.0666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(33), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(33) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(33), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(33) {
   transition-delay: 1.1s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(34), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(34) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(34), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(34) {
   transition-delay: 1.1333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(35), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(35) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(35), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(35) {
   transition-delay: 1.1666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(36), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(36) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(36), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(36) {
   transition-delay: 1.2s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(37), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(37) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(37), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(37) {
   transition-delay: 1.2333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(38), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(38) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(38), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(38) {
   transition-delay: 1.2666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(39), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(39) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(39), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(39) {
   transition-delay: 1.3s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(40), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(40) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(40), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(40) {
   transition-delay: 1.3333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(41), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(41) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(41), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(41) {
   transition-delay: 1.3666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(42), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(42) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(42), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(42) {
   transition-delay: 1.4s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(43), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(43) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(43), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(43) {
   transition-delay: 1.4333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(44), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(44) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(44), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(44) {
   transition-delay: 1.4666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(45), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(45) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(45), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(45) {
   transition-delay: 1.5s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(46), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(46) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(46), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(46) {
   transition-delay: 1.5333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(47), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(47) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(47), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(47) {
   transition-delay: 1.5666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(48), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(48) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(48), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(48) {
   transition-delay: 1.6s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(49), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(49) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(49), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(49) {
   transition-delay: 1.6333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(50), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(50) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(50), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(50) {
   transition-delay: 1.6666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(51), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(51) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(51), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(51) {
   transition-delay: 1.7s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(52), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(52) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(52), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(52) {
   transition-delay: 1.7333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(53), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(53) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(53), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(53) {
   transition-delay: 1.7666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(54), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(54) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(54), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(54) {
   transition-delay: 1.8s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(55), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(55) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(55), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(55) {
   transition-delay: 1.8333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(56), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(56) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(56), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(56) {
   transition-delay: 1.8666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(57), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(57) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(57), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(57) {
   transition-delay: 1.9s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(58), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(58) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(58), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(58) {
   transition-delay: 1.9333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(59), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(59) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(59), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(59) {
   transition-delay: 1.9666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(60), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(60) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(60), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(60) {
   transition-delay: 2s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(61), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(61) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(61), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(61) {
   transition-delay: 2.0333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(62), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(62) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(62), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(62) {
   transition-delay: 2.0666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(63), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(63) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(63), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(63) {
   transition-delay: 2.1s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(64), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(64) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(64), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(64) {
   transition-delay: 2.1333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(65), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(65) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(65), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(65) {
   transition-delay: 2.1666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(66), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(66) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(66), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(66) {
   transition-delay: 2.2s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(67), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(67) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(67), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(67) {
   transition-delay: 2.2333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(68), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(68) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(68), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(68) {
   transition-delay: 2.2666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(69), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(69) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(69), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(69) {
   transition-delay: 2.3s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(70), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(70) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(70), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(70) {
   transition-delay: 2.3333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(71), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(71) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(71), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(71) {
   transition-delay: 2.3666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(72), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(72) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(72), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(72) {
   transition-delay: 2.4s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(73), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(73) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(73), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(73) {
   transition-delay: 2.4333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(74), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(74) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(74), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(74) {
   transition-delay: 2.4666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(75), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(75) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(75), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(75) {
   transition-delay: 2.5s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(76), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(76) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(76), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(76) {
   transition-delay: 2.5333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(77), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(77) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(77), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(77) {
   transition-delay: 2.5666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(78), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(78) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(78), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(78) {
   transition-delay: 2.6s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(79), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(79) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(79), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(79) {
   transition-delay: 2.6333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(80), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(80) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(80), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(80) {
   transition-delay: 2.6666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(81), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(81) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(81), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(81) {
   transition-delay: 2.7s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(82), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(82) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(82), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(82) {
   transition-delay: 2.7333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(83), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(83) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(83), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(83) {
   transition-delay: 2.7666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(84), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(84) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(84), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(84) {
   transition-delay: 2.8s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(85), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(85) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(85), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(85) {
   transition-delay: 2.8333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(86), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(86) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(86), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(86) {
   transition-delay: 2.8666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(87), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(87) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(87), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(87) {
   transition-delay: 2.9s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(88), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(88) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(88), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(88) {
   transition-delay: 2.9333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(89), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(89) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(89), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(89) {
   transition-delay: 2.9666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(90), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(90) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(90), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(90) {
   transition-delay: 3s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(91), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(91) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(91), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(91) {
   transition-delay: 3.0333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(92), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(92) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(92), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(92) {
   transition-delay: 3.0666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(93), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(93) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(93), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(93) {
   transition-delay: 3.1s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(94), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(94) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(94), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(94) {
   transition-delay: 3.1333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(95), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(95) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(95), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(95) {
   transition-delay: 3.1666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(96), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(96) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(96), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(96) {
   transition-delay: 3.2s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(97), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(97) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(97), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(97) {
   transition-delay: 3.2333333333s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(98), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(98) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(98), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(98) {
   transition-delay: 3.2666666667s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(99), .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled) div span:nth-child(99) {
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(99), .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled) div span:nth-child(99) {
   transition-delay: 3.3s;
 }
-.ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled):hover span, .ccm-page .btn.btn-animated-text:not(.disabled):not(:disabled):active span, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled):hover span, .ccm-btn-preview-container .btn.btn-animated-text:not(.disabled):not(:disabled):active span {
-  --m: calc(1rem * -1);
+.ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled):hover span, .ccm-page .btn.btn-hover-animation-2:not(.disabled):not(:disabled):active span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled):hover span, .ccm-btn-preview-container .btn.btn-hover-animation-2:not(.disabled):not(:disabled):active span {
+  --m: calc(var(--button-regular-height) * -1);
 }
-.ccm-page .btn.btn-animated-on-hover, .ccm-btn-preview-container .btn.btn-animated-on-hover {
+.ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled), .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled) {
+  outline-offset: 0;
+}
+.ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-primary, .ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-outline-primary, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-primary, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-outline-primary {
+  outline: 0 solid rgb(var(--primary-button-active-border-color));
+}
+.ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-secondary, .ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-outline-secondary, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-secondary, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-outline-secondary {
+  outline: 0 solid rgb(var(--secondary-button-active-border-color));
+}
+.ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-sm:hover, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-sm:hover {
+  outline-width: var(--button-small-border-width);
+}
+.ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-lg:hover, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled).btn-lg:hover {
+  outline-width: var(--button-large-border-width);
+}
+.ccm-page .btn.btn-hover-animation-3:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-hover-animation-3:not(.disabled):not(:disabled):hover {
+  outline-color: transparent;
+  outline-offset: 10px;
+  outline-width: var(--button-regular-border-width);
+  transition: all 1200ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.ccm-page .btn.btn-hover-animation-4, .ccm-btn-preview-container .btn.btn-hover-animation-4 {
   transition: all 0.3s;
 }
-.ccm-page .btn.btn-animated-on-hover:not(.disabled):not(:disabled):hover, .ccm-page .btn.btn-animated-on-hover:not(.disabled):not(:disabled):active, .ccm-btn-preview-container .btn.btn-animated-on-hover:not(.disabled):not(:disabled):hover, .ccm-btn-preview-container .btn.btn-animated-on-hover:not(.disabled):not(:disabled):active {
-  transform: translateY(-3px);
+.ccm-page .btn.btn-hover-animation-4:not(.disabled):not(:disabled):hover i, .ccm-page .btn.btn-hover-animation-4:not(.disabled):not(:disabled):active i, .ccm-btn-preview-container .btn.btn-hover-animation-4:not(.disabled):not(:disabled):hover i, .ccm-btn-preview-container .btn.btn-hover-animation-4:not(.disabled):not(:disabled):active i {
+  transform: rotate(-45deg);
+}
+.ccm-page .btn.btn-hover-animation-4 i, .ccm-btn-preview-container .btn.btn-hover-animation-4 i {
+  transition: all 0.3s;
+}
+.ccm-page .btn.btn-hover-animation-5, .ccm-btn-preview-container .btn.btn-hover-animation-5 {
+  overflow: hidden;
+}
+.ccm-page .btn.btn-hover-animation-5 .hover-glow, .ccm-btn-preview-container .btn.btn-hover-animation-5 .hover-glow {
+  height: var(--button-glow-effect-size);
+  width: var(--button-glow-effect-size);
+  background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.4), transparent);
+  position: absolute;
+  border-radius: 100%;
+  z-index: 2;
+  top: calc(var(--button-glow-effect-size) / -2);
+  left: calc(var(--button-glow-effect-size) / -2);
+  opacity: 0;
+}
+.ccm-page .btn.btn-hover-animation-6.disabled i, .ccm-page .btn.btn-hover-animation-6:disabled i, .ccm-btn-preview-container .btn.btn-hover-animation-6.disabled i, .ccm-btn-preview-container .btn.btn-hover-animation-6:disabled i {
+  display: none;
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled) i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled) i {
+  transition: all 250ms ease-in;
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-left.btn-sm i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-left.btn-sm i {
+  left: calc((var(--button-small-icon-width) + var(--button-small-icon-padding-left) + var(--button-small-icon-padding-right) + var(--button-small-icon-margin-left) + var(--button-small-icon-margin-right)) * -1);
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-left.btn-lg i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-left.btn-lg i {
+  left: calc((var(--button-large-icon-width) + var(--button-large-icon-padding-left) + var(--button-large-icon-padding-right) + var(--button-large-icon-margin-left) + var(--button-large-icon-margin-right)) * -1);
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-left i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-left i {
+  left: calc((var(--button-regular-icon-width) + var(--button-regular-icon-padding-left) + var(--button-regular-icon-padding-right) + var(--button-regular-icon-margin-left) + var(--button-regular-icon-margin-right)) * -1);
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-right.btn-sm i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-right.btn-sm i {
+  right: calc((var(--button-small-icon-width) + var(--button-small-icon-padding-left) + var(--button-small-icon-padding-right) + var(--button-small-icon-margin-left) + var(--button-small-icon-margin-right)) * -1);
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-right.btn-lg i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-right.btn-lg i {
+  right: calc((var(--button-large-icon-width) + var(--button-large-icon-padding-left) + var(--button-large-icon-padding-right) + var(--button-large-icon-margin-left) + var(--button-large-icon-margin-right)) * -1);
+}
+.ccm-page .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-right i, .ccm-btn-preview-container .btn.btn-hover-animation-6:not(.disabled):not(:disabled):not(:hover).btn-icon-right i {
+  right: calc((var(--button-regular-icon-width) + var(--button-regular-icon-padding-left) + var(--button-regular-icon-padding-right) + var(--button-regular-icon-margin-left) + var(--button-regular-icon-margin-right)) * -1);
 }

@@ -110,16 +110,46 @@ class SimpleButtons extends DashboardPageController
 
         $roundedCornerClasses = [
             "" => t("No Corners"),
-            "btn-rounded-corners-5" => t("Rounded Corners (5px)"),
-            "btn-rounded-corners-10" => t("Rounded Corners (10px)"),
-            "btn-rounded-corners-15" => t("Rounded Corners (15px)"),
-            "btn-rounded-corners-20" => t("Rounded Corners (20px)"),
-            "btn-rounded-corners-25" => t("Rounded Corners (25px)")
+            "btn-rounded-corners-5" => "5px",
+            "btn-rounded-corners-10" => "10px",
+            "btn-rounded-corners-15" => "15px",
+            "btn-rounded-corners-20" => "20px",
+            "btn-rounded-corners-25" => "25px"
         ];
 
+        $hoverAnimationClasses = [
+            "btn-hover-animation-1" => t("Animation %s", 1),
+            "btn-hover-animation-2" => t("Animation %s", 2),
+            "btn-hover-animation-3" => t("Animation %s", 3),
+            "btn-hover-animation-4" => t("Animation %s", 4),
+            "btn-hover-animation-5" => t("Animation %s", 5),
+            "btn-hover-animation-6" => t("Animation %s", 6)
+        ];
+
+        $fontWeightClasses = [
+            "btn-font-weight-100" => "100",
+            "btn-font-weight-200" => "200",
+            "btn-font-weight-300" => "300",
+            "btn-font-weight-400" => "400",
+            "btn-font-weight-500" => "500",
+            "btn-font-weight-600" => "600",
+            "btn-font-weight-700" => "700",
+            "btn-font-weight-800" => "800",
+            "btn-font-weight-900" => "900",
+        ];
+
+        $iconClasses = [
+            "" => t("No Background"),
+            "btn-icon-rounded-background" => t("Rounded Background"),
+            "btn-icon-square-background" => t("Square Background")
+        ];
+
+        $this->set("iconClasses", $iconClasses);
         $this->set("backgroundClasses", $backgroundClasses);
         $this->set("shadowClasses", $shadowClasses);
         $this->set("roundedCornerClasses", $roundedCornerClasses);
+        $this->set("hoverAnimationClasses", $hoverAnimationClasses);
+        $this->set("fontWeightClasses", $fontWeightClasses);
         $this->set("primaryButtonRegularTextColor", (string)$config->get("simple_buttons.styles.buttons.primary.states.regular.colors.text", "#fff"));
         $this->set("primaryButtonRegularBackgroundColor", (string)$config->get("simple_buttons.styles.buttons.primary.states.regular.colors.background", "#0d6efd"));
         $this->set("primaryButtonRegularBorderColor", (string)$config->get("simple_buttons.styles.buttons.primary.states.regular.colors.border", "#0d6efd"));

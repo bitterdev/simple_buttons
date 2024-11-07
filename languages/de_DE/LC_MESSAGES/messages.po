@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simple_buttons 0.0.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-06T15:22:08+00:00\n"
-"PO-Revision-Date: 2024-11-06 16:23+0100\n"
+"POT-Creation-Date: 2024-11-07T19:51:48+00:00\n"
+"PO-Revision-Date: 2024-11-07 20:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -22,14 +22,6 @@ msgstr "Formulare"
 #: packages/simple_buttons/controller.php:25
 msgid "Simple Buttons"
 msgstr "Simple Buttons"
-
-#: packages/simple_buttons/data.xml:18
-msgid "Colors"
-msgstr "Farben"
-
-#: packages/simple_buttons/data.xml:21
-msgid "Options"
-msgstr "Optionen"
 
 #: packages/simple_buttons/controller.php:20
 msgid "Add buttons and button groups to your site with more than 50 customizable styles."
@@ -288,166 +280,72 @@ msgstr "Möchten Sie diese Schaltfläche wirklich löschen?"
 msgid "Delete"
 msgstr "Löschen"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:46
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:77
+msgid "General"
+msgstr "Allgemein"
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:78
 msgid "Primary Button"
 msgstr "Primäre Schaltfläche"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:47
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:79
 msgid "Secondary Button"
 msgstr "Sekundäre Schaltfläche"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:66
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:162
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:80
+msgid "Full Preview"
+msgstr "Vollständige Vorschau"
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:163
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:282
 msgid "Regular State"
 msgstr "Normaler Zustand"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:70
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:104
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:134
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:166
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:200
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:230
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:167
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:201
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:231
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:286
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:320
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:350
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:78
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:112
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:142
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:174
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:208
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:238
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:175
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:209
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:239
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:294
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:328
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:358
 msgid "Background Color"
 msgstr "Hintergrundfarbe"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:86
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:120
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:150
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:182
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:216
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:246
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:183
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:217
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:247
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:302
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:336
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:366
 msgid "Border Color"
 msgstr "Rahmenfarbe"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:93
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:189
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:190
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:309
 msgid "Note: For outline buttons, the border color is also used as the text color."
 msgstr "Hinweis: Bei Konturschaltflächen wird die Rahmenfarbe gleichzeitig als Textfarbe verwendet."
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:100
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:196
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:197
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:316
 msgid "Active State"
 msgstr "Aktiver Zustand"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:130
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:226
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:227
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:346
 msgid "Disabled State"
 msgstr "Deaktivierter Zustand"
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/colors.php:258
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:205
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:564
 msgid "Save"
 msgstr "Speichern"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:41
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:63
-msgid "Solid Color"
-msgstr "Einfarbig"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:42
-msgid "Gradient (Top to Bottom)"
-msgstr "Verlauf (von oben nach unten)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:43
-msgid "Gradient (Bottom to Top)"
-msgstr "Verlauf (von unten nach oben)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:44
-msgid "Gradient (Right to Left)"
-msgstr "Verlauf (von rechts nach links)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:45
-msgid "Gradient (Left to Right)"
-msgstr "Verlauf (von links nach rechts)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:49
-msgid "No Shadow"
-msgstr "Kein Schatten"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:50
-msgid "Shadow Style 1"
-msgstr "Schatten-Stil 1"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:51
-msgid "Shadow Style 2"
-msgstr "Schatten-Stil 2"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:52
-msgid "Shadow Style 3"
-msgstr "Schatten-Stil 3"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:53
-msgid "Shadow Style 4"
-msgstr "Schatten-Stil 4"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:54
-msgid "Shadow Style 5"
-msgstr "Schatten-Stil 5"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:55
-msgid "Shadow Style 6"
-msgstr "Schatten-Stil 6"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:56
-msgid "Shadow Style 7"
-msgstr "Schatten-Stil 7"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:57
-msgid "Shadow Style 8"
-msgstr "Schatten-Stil 8"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:58
-msgid "Shadow Style 9"
-msgstr "Schatten-Stil 9"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:59
-msgid "Shadow Style 10"
-msgstr "Schatten-Stil 10"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:64
-msgid "Rounded Corners (5px)"
-msgstr "Abgerundete Ecken (5px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:65
-msgid "Rounded Corners (10px)"
-msgstr "Abgerundete Ecken (10px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:66
-msgid "Rounded Corners (15px)"
-msgstr "Abgerundete Ecken (15px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:67
-msgid "Rounded Corners (20px)"
-msgstr "Abgerundete Ecken (20px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:68
-msgid "Rounded Corners (25px)"
-msgstr "Abgerundete Ecken (25px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:69
-msgid "Rounded Corners (30px)"
-msgstr "Abgerundete Ecken (30px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:70
-msgid "Rounded Corners (35px)"
-msgstr "Abgerundete Ecken (35px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:71
-msgid "Rounded Corners (40px)"
-msgstr "Abgerundete Ecken (40px)"
-
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons/options.php:72
-msgid "Rounded Corners (45px)"
-msgstr "Abgerundete Ecken (45px)"
 
 #: packages/simple_buttons/elements/dashboard/help.php:10
 msgid "Get Help"
@@ -458,82 +356,171 @@ msgstr "Hilfe anfordern"
 msgid "Support"
 msgstr "Support"
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:35
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:35
 msgid "You need to enter a valid text color for the primary button regular state."
 msgstr "Sie müssen eine gültige Textfarbe für den regulären Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:36
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:36
 msgid "You need to enter a valid background color for the primary button regular state."
 msgstr "Sie müssen eine gültige Hintergrundfarbe für den regulären Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:37
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:37
 msgid "You need to enter a valid border color for the primary button regular state."
 msgstr "Sie müssen eine gültige Rahmenfarbe für den regulären Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:38
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:38
 msgid "You need to enter a valid text color for the primary button active state."
 msgstr "Sie müssen eine gültige Textfarbe für den aktiven Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:39
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:39
 msgid "You need to enter a valid background color for the primary button active state."
 msgstr "Sie müssen eine gültige Hintergrundfarbe für den aktiven Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:40
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:40
 msgid "You need to enter a valid border color for the primary button active state."
 msgstr "Sie müssen eine gültige Rahmenfarbe für den aktiven Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:41
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:41
 msgid "You need to enter a valid text color for the primary button disabled state."
 msgstr "Sie müssen eine gültige Textfarbe für den deaktivierten Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:42
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:42
 msgid "You need to enter a valid background color for the primary button disabled state."
 msgstr "Sie müssen eine gültige Hintergrundfarbe für den deaktivierten Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:43
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:43
 msgid "You need to enter a valid border color for the primary button disabled state."
 msgstr "Sie müssen eine gültige Rahmenfarbe für den deaktivierten Status der primären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:44
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:44
 msgid "You need to enter a valid text color for the secondary button regular state."
 msgstr "Sie müssen eine gültige Textfarbe für den regulären Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:45
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:45
 msgid "You need to enter a valid background color for the secondary button regular state."
 msgstr "Sie müssen eine gültige Hintergrundfarbe für den regulären Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:46
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:46
 msgid "You need to enter a valid border color for the secondary button regular state."
 msgstr "Sie müssen eine gültige Rahmenfarbe für den regulären Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:47
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:47
 msgid "You need to enter a valid text color for the secondary button active state."
 msgstr "Sie müssen eine gültige Textfarbe für den aktiven Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:48
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:48
 msgid "You need to enter a valid background color for the secondary button active state."
 msgstr "Sie müssen eine gültige Hintergrundfarbe für den aktiven Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:49
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:49
 msgid "You need to enter a valid border color for the secondary button active state."
 msgstr "Sie müssen eine gültige Rahmenfarbe für den aktiven Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:50
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:50
 msgid "You need to enter a valid text color for the secondary button disabled state."
 msgstr "Sie müssen eine gültige Textfarbe für den deaktivierten Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:51
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:51
 msgid "You need to enter a valid background color for the secondary button disabled state."
 msgstr "Sie müssen eine gültige Hintergrundfarbe für den deaktivierten Status der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:52
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:52
 msgid "You need to enter a valid border color for the secondary button disabled state."
 msgstr "Sie müssen eine gültige Rahmenfarbe für den deaktivierten Zustand der sekundären Schaltfläche eingeben."
 
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/colors.php:75
-#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons/options.php:45
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:76
 msgid "The settings has been successfully updated."
 msgstr "Die Einstellungen wurden erfolgreich aktualisiert."
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:90
+msgid "Solid Color"
+msgstr "Einfarbig"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:91
+msgid "Gradient (Top to Bottom)"
+msgstr "Verlauf (von oben nach unten)"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:92
+msgid "Gradient (Bottom to Top)"
+msgstr "Verlauf (von unten nach oben)"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:93
+msgid "Gradient (Right to Left)"
+msgstr "Verlauf (von rechts nach links)"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:94
+msgid "Gradient (Left to Right)"
+msgstr "Verlauf (von links nach rechts)"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:98
+msgid "No Shadow"
+msgstr "Kein Schatten"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:99
+msgid "Shadow Style 1"
+msgstr "Schatten-Stil 1"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:100
+msgid "Shadow Style 2"
+msgstr "Schatten-Stil 2"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:101
+msgid "Shadow Style 3"
+msgstr "Schatten-Stil 3"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:102
+msgid "Shadow Style 4"
+msgstr "Schatten-Stil 4"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:103
+msgid "Shadow Style 5"
+msgstr "Schatten-Stil 5"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:104
+msgid "Shadow Style 6"
+msgstr "Schatten-Stil 6"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:105
+msgid "Shadow Style 7"
+msgstr "Schatten-Stil 7"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:106
+msgid "Shadow Style 8"
+msgstr "Schatten-Stil 8"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:107
+msgid "Shadow Style 9"
+msgstr "Schatten-Stil 9"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:108
+msgid "Shadow Style 10"
+msgstr "Schatten-Stil 10"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:112
+msgid "No Corners"
+msgstr "Keine Ecken"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:121
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:122
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:123
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:124
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:125
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:126
+#, php-format
+msgid "Animation %s"
+msgstr "Animation %s"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:142
+msgid "No Background"
+msgstr "Kein Hintergrund"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:143
+msgid "Rounded Background"
+msgstr "Abgerundeter Hintergrund"
+
+#: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:144
+msgid "Square Background"
+msgstr "Quadratischer Hintergrund"
 
 #: packages/simple_buttons/controllers/dialog/support/create_ticket.php:56
 msgid "Ticket Created"
