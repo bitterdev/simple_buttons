@@ -4,7 +4,7 @@
   // Variables - Small Sized Buttons
   --button-small-font-size: 1em;
   --button-small-height: 0.8rem;
-  --button-small-line-height: 1em;
+  --button-small-line-height: 0.8rem;
   --button-small-letter-spacing: .5px;
   --button-small-padding-top: 0.8rem;
   --button-small-padding-bottom: 0.8rem;
@@ -31,7 +31,7 @@
   // Variables - Regular Sized Buttons
   --button-regular-font-size: 1em;
   --button-regular-height: 0.9rem;
-  --button-regular-line-height: 1em;
+  --button-regular-line-height: 0.9rem;
   --button-regular-letter-spacing: .5px;
   --button-regular-padding-top: 0.9rem;
   --button-regular-padding-bottom: 0.9rem;
@@ -58,7 +58,7 @@
   // Variables - Large Sized Buttons
   --button-large-font-size: 1em;
   --button-large-height: 1rem;
-  --button-large-line-height: 1em;
+  --button-large-line-height: 1rem;
   --button-large-letter-spacing: .5px;
   --button-large-padding-top: 1rem;
   --button-large-padding-bottom: 1rem;
@@ -145,7 +145,10 @@
     flex-wrap: nowrap;
     position: relative;
     width: 100%;
-    overflow: scroll;
+
+    @media only screen and (max-width: 767px) {
+      overflow: scroll;
+    }
 
     .btn {
       &:not(:last-child):not(:first-child) {

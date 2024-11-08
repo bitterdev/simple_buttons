@@ -2,7 +2,7 @@
   "name": "simple_buttons",
   "version": "1.0.0",
   "author": "Fabian Bitter",
-  "description": "Add buttons and button groups to your site with more than 50 customizable styles.",
+  "description": "Simple Buttons is a powerful Concrete CMS add-on that enables customizable button designs.",
   "homepage": "https://www.bitter.de",
   "devDependencies": {
     "abbrev": "^1.1.1",

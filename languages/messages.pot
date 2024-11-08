@@ -23,7 +23,7 @@ msgid "Simple Buttons"
 msgstr ""
 
 #: packages/simple_buttons/controller.php:20
-msgid "Add buttons and button groups to your site with more than 50 customizable styles."
+msgid "Simple Buttons is a powerful Concrete CMS add-on that enables customizable button designs."
 msgstr ""
 
 #: packages/simple_buttons/blocks/buttons/controller.php:32

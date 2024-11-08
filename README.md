@@ -1,6 +1,5 @@
-Enthält mehr als 50 anpassbare Button-Styles
-Auf Seitenebene lassen sich individuelle Styles festlegen
-Buttons und Button-Gruppen lassen sich erstellen via Blocktyp
-Alle Bootstrap Buttons werden automatisch mit-gestyled
+# Simple Buttons
 
+Simple Buttons is a versatile add-on for Concrete CMS that allows you to easily create custom button styles. This extension offers a wide range of design options: from colors, gradients, and text formatting to hover animations and icon alignment. With the live preview feature, you can instantly see and adjust changes as you go.
 
+Once a style is set, all buttons on the frontend are automatically updated with the new design, ensuring a cohesive and consistent look across your site. Additionally, the add-on includes a dedicated block type, making it easy to add individual buttons or multiple buttons as an input group – perfect for various layouts and applications.  FontAwesome icon support completes the package, enabling you to create buttons that are not only functional but also visually appealing and unique.

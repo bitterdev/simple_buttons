@@ -17,7 +17,7 @@ class Controller extends Package
 
     public function getPackageDescription(): string
     {
-        return t('Add buttons and button groups to your site with more than 50 customizable styles.');
+        return t('Simple Buttons is a powerful Concrete CMS add-on that enables customizable button designs.');
     }
 
     public function getPackageName(): string

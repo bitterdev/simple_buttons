@@ -1,10 +1,26 @@
 (function ($) {
     $(function () {
+        // Replace old input buttons with button elements
+        $(".ccm-page input.btn[type='submit'], .ccm-btn-preview-container input.btn[type='submit']").each(function () {
+            let $originalBtn = $(this);
+            let $newBtn = $("<button/>");
 
+            $.each($originalBtn.get(0).attributes, function() {
+                if (this.specified) {
+                    $newBtn.attr(this.name, this.value);
+                }
+            });
 
-        $(".btn").each(function () {
+            $newBtn.html($originalBtn.attr("value"));
+            $newBtn.removeAttr("value");
+
+            $originalBtn.replaceWith($newBtn);
+        });
+
+        $(".ccm-page .btn, .ccm-btn-preview-container .btn").each(function () {
             let $btn = $(this), $i = null, iconPosition, btnText = $btn.text().trim();
 
+            // Process all buttons that are not build with the button generator
             if (!$btn.hasClass("btn-processed-text")) {
                 if ($btn.find("i").length) {
                     $i = $btn.find("i").clone();
@@ -43,6 +59,7 @@
                 $btn.addClass("btn-processed-text")
             }
 
+            // Append Hover Glow Element
             $btn.append($("<div/>").addClass("hover-glow").css({display: "none"}));
 
             $btn.on({

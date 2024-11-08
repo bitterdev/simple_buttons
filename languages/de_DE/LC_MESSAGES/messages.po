@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: simple_buttons 0.0.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-07T19:51:48+00:00\n"
-"PO-Revision-Date: 2024-11-07 20:52+0100\n"
+"PO-Revision-Date: 2024-11-08 10:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -24,8 +24,8 @@ msgid "Simple Buttons"
 msgstr "Simple Buttons"
 
 #: packages/simple_buttons/controller.php:20
-msgid "Add buttons and button groups to your site with more than 50 customizable styles."
-msgstr "Fügen Sie Ihrer Site Schaltflächen und Schaltflächengruppen mit über 50 anpassbaren Stilen hinzu."
+msgid "Simple Buttons is a powerful Concrete CMS add-on that enables customizable button designs."
+msgstr "Simple Buttons ist ein leistungsstarkes Add-on für Concrete CMS, das anpassbare Button-Designs ermöglicht."
 
 #: packages/simple_buttons/blocks/buttons/controller.php:32
 msgid "Add buttons to your site."
