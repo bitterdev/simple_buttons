@@ -7,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-07T19:51:48+00:00\n"
-"PO-Revision-Date: 2024-11-07T19:51:49+00:00\n"
+"POT-Creation-Date: 2024-11-15T20:07:27+00:00\n"
+"PO-Revision-Date: 2024-11-15T20:07:28+00:00\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -124,14 +124,18 @@ msgid "Top"
 msgstr ""
 
 #: packages/simple_buttons/blocks/buttons/controller.php:77
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:416
 msgid "Small"
 msgstr ""
 
 #: packages/simple_buttons/blocks/buttons/controller.php:78
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:410
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:416
 msgid "Regular"
 msgstr ""
 
 #: packages/simple_buttons/blocks/buttons/controller.php:79
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:416
 msgid "Large"
 msgstr ""
 
@@ -239,10 +243,12 @@ msgid "Button Size"
 msgstr ""
 
 #: packages/simple_buttons/blocks/buttons/edit.php:174
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:413
 msgid "Disabled"
 msgstr ""
 
 #: packages/simple_buttons/blocks/buttons/edit.php:184
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:410
 msgid "Outline"
 msgstr ""
 
@@ -284,10 +290,14 @@ msgid "General"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:78
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:143
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:418
 msgid "Primary Button"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:79
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:143
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:418
 msgid "Secondary Button"
 msgstr ""
 
@@ -296,53 +306,73 @@ msgid "Full Preview"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:163
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:282
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:283
 msgid "Regular State"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:167
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:201
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:231
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:286
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:320
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:350
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:287
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:321
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:351
 msgid "Text Color"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:175
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:209
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:239
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:294
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:328
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:358
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:295
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:329
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:359
 msgid "Background Color"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:183
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:217
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:247
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:302
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:336
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:366
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:303
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:337
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:367
 msgid "Border Color"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:190
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:309
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:310
 msgid "Note: For outline buttons, the border color is also used as the text color."
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:197
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:316
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:317
 msgid "Active State"
 msgstr ""
 
 #: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:227
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:346
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:347
 msgid "Disabled State"
 msgstr ""
 
-#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:564
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:262
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:382
+msgid "(Outline)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:262
+#, php-format
+msgid "Primary Button %s"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:262
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:382
+msgid "(Regular)"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:382
+#, php-format
+msgid "Secondary Button %s"
+msgstr ""
+
+#: packages/simple_buttons/single_pages/dashboard/simple_buttons.php:578
 msgid "Save"
 msgstr ""
 
@@ -500,13 +530,27 @@ msgid "No Corners"
 msgstr ""
 
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:121
+msgid "Button lifts up"
+msgstr ""
+
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:122
+msgid "Text animates"
+msgstr ""
+
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:123
+msgid "Outline animation"
+msgstr ""
+
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:124
+msgid "Symbol rotates 45°"
+msgstr ""
+
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:125
+msgid "Glow effect"
+msgstr ""
+
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:126
-#, php-format
-msgid "Animation %s"
+msgid "Symbol slides in from the side"
 msgstr ""
 
 #: packages/simple_buttons/controllers/single_page/dashboard/simple_buttons.php:142

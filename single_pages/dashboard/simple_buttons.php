@@ -136,11 +136,11 @@ $buttonBuilder = $app->make(Builder::class);
 
                 <div class="col-md-4 col-lg-4 col-sm-12">
                     <div class="form-group">
-                        <div class="ccm-btn-preview-container border p-3 ccm-btn-small-preview">
-                            <div class="row">
+                        <div class="ccm-btn-preview-container border ccm-btn-small-preview">
+                            <div class="row justify-content-center align-items-center p-3">
                                 <?php foreach ([ButtonStyle::BUTTON_STYLE_PRIMARY, ButtonStyle::BUTTON_STYLE_SECONDARY] as $buttonStyle) {
                                     echo $buttonBuilder->render((new Button())
-                                        ->setLabel("Lorem Ipsum")
+                                        ->setLabel($buttonStyle === ButtonStyle::BUTTON_STYLE_PRIMARY ? t("Primary Button") : t("Secondary Button"))
                                         ->setSize(ButtonSize::BUTTON_SIZE_REGULAR)
                                         ->setIconPosition(IconPosition::ICON_POSITION_LEFT)
                                         ->setButtonStyle($buttonStyle)
@@ -255,14 +255,15 @@ $buttonBuilder = $app->make(Builder::class);
 
                 <div class="col-md-4 col-lg-4 col-sm-12">
                     <div class="form-group">
-                        <div class="ccm-btn-preview-container border p-3 ccm-btn-small-preview">
-                            <div class="row">
-                                <?php foreach ([ButtonStyle::BUTTON_STYLE_PRIMARY, ButtonStyle::BUTTON_STYLE_SECONDARY] as $buttonStyle) {
+                        <div class="ccm-btn-preview-container border ccm-btn-small-preview">
+                            <div class="row justify-content-center align-items-center p-3">
+                                <?php foreach ([false, true] as $outline) {
                                     echo $buttonBuilder->render((new Button())
-                                        ->setLabel("Lorem Ipsum")
+                                        ->setLabel($outline ? t("Primary Button %s", t("(Outline)")) : t("Primary Button %s", t("(Regular)")))
                                         ->setSize(ButtonSize::BUTTON_SIZE_REGULAR)
                                         ->setIconPosition(IconPosition::ICON_POSITION_LEFT)
-                                        ->setButtonStyle($buttonStyle)
+                                        ->setOutline($outline)
+                                        ->setButtonStyle(ButtonStyle::BUTTON_STYLE_PRIMARY)
                                         ->setIcon("fas fa-times")
                                         ->setApplyOptions(false)
                                     );
@@ -374,14 +375,15 @@ $buttonBuilder = $app->make(Builder::class);
 
                 <div class="col-md-4 col-lg-4 col-sm-12">
                     <div class="form-group">
-                        <div class="ccm-btn-preview-container border p-3 ccm-btn-small-preview">
-                            <div class="row">
-                                <?php foreach ([ButtonStyle::BUTTON_STYLE_PRIMARY, ButtonStyle::BUTTON_STYLE_SECONDARY] as $buttonStyle) {
+                        <div class="ccm-btn-preview-container border ccm-btn-small-preview">
+                            <div class="row justify-content-center align-items-center p-3">
+                                <?php foreach ([false, true] as $outline) {
                                     echo $buttonBuilder->render((new Button())
-                                        ->setLabel("Lorem Ipsum")
+                                        ->setLabel($outline ? t("Secondary Button %s", t("(Outline)")) : t("Secondary Button %s", t("(Regular)")))
                                         ->setSize(ButtonSize::BUTTON_SIZE_REGULAR)
                                         ->setIconPosition(IconPosition::ICON_POSITION_LEFT)
-                                        ->setButtonStyle($buttonStyle)
+                                        ->setOutline($outline)
+                                        ->setButtonStyle(ButtonStyle::BUTTON_STYLE_SECONDARY)
                                         ->setIcon("fas fa-times")
                                         ->setApplyOptions(false)
                                     );
@@ -402,8 +404,21 @@ $buttonBuilder = $app->make(Builder::class);
                                 foreach ([ButtonStyle::BUTTON_STYLE_PRIMARY, ButtonStyle::BUTTON_STYLE_SECONDARY] as $buttonStyle) {
                                     foreach ([false, true] as $outline) {
                                         foreach ([false, true] as $disabled) {
+
+                                            $ext = [];
+
+                                            $ext[] = $outline ? t("Outline") : t("Regular");
+
+                                            if ($disabled) {
+                                                $ext[] = t("Disabled");
+                                            }
+
+                                            $ext[] = $buttonSize === ButtonSize::BUTTON_SIZE_SMALL ? t("Small") : ($buttonSize === ButtonSize::BUTTON_SIZE_LARGE ? t("Large") : t("Regular"));
+
+                                            $label = ($buttonStyle === ButtonStyle::BUTTON_STYLE_PRIMARY ? t("Primary Button") : t("Secondary Button")) . " (" . implode(", ", $ext) . ")";
+
                                             echo $buttonBuilder->render((new Button())
-                                                ->setLabel("Lorem Ipsum")
+                                                ->setLabel($label)
                                                 ->setIsDisabled($disabled)
                                                 ->setOutline($outline)
                                                 ->setSize($buttonSize)
@@ -429,6 +444,18 @@ $buttonBuilder = $app->make(Builder::class);
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .ccm-btn-small-preview .row {
+            width: 100%;
+        }
+
+        .ccm-btn-small-preview .btn {
+            width: 100% !important;
+        }
+
+        .ccm-btn-preview-container .btn {
+            display: grid !important;
         }
 
         .ccm-btn-preview-container {

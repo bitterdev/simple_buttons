@@ -118,12 +118,12 @@ class SimpleButtons extends DashboardPageController
         ];
 
         $hoverAnimationClasses = [
-            "btn-hover-animation-1" => t("Animation %s", 1),
-            "btn-hover-animation-2" => t("Animation %s", 2),
-            "btn-hover-animation-3" => t("Animation %s", 3),
-            "btn-hover-animation-4" => t("Animation %s", 4),
-            "btn-hover-animation-5" => t("Animation %s", 5),
-            "btn-hover-animation-6" => t("Animation %s", 6)
+            "btn-hover-animation-1" => t("Button lifts up"),
+            //"btn-hover-animation-2" => t("Text animates"),
+            "btn-hover-animation-3" => t("Outline animation"),
+            "btn-hover-animation-4" => t("Symbol rotates 45°"),
+            "btn-hover-animation-5" => t("Glow effect"),
+            "btn-hover-animation-6" => t("Symbol slides in from the side")
         ];
 
         $fontWeightClasses = [

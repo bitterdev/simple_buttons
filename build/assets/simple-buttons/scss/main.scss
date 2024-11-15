@@ -133,7 +133,7 @@
   }
 }
 
-.ccm-page, .ccm-btn-preview-container {
+div.ccm-page, div.ccm-btn-preview-container {
 
   /***
    * Input Group Styles
@@ -151,8 +151,18 @@
     }
 
     .btn {
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
       &:not(:last-child):not(:first-child) {
         border-radius: 0 !important;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
   }
@@ -176,18 +186,20 @@
     appearance: none;
     overflow: hidden;
     text-align: center;
-    width: 100%;
+    padding: 0;
 
     .label {
       display: inline-table;
       height: var(--button-regular-height);
       line-height: var(--button-regular-line-height);
       font-size: var(--button-regular-font-size);
-      margin: var(--button-regular-padding-top) var(--button-regular-padding-right) var(--button-regular-padding-bottom) var(--button-regular-padding-left);
-      width: calc(100% - var(--button-regular-padding-right) - var(--button-regular-padding-left));
+      margin: 0;
+      padding: var(--button-regular-padding-top) var(--button-regular-padding-right) var(--button-regular-padding-bottom) var(--button-regular-padding-left);
+      width: 100%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      text-align: inherit;
     }
 
     &:active {
@@ -200,6 +212,7 @@
 
     // Icon Style
     &.btn-has-icon {
+
       i {
         margin: var(--button-regular-icon-margin-top) var(--button-regular-icon-margin-right) var(--button-regular-icon-margin-bottom) var(--button-regular-icon-margin-left);
         padding: var(--button-regular-icon-padding-top) var(--button-regular-icon-padding-right) var(--button-regular-icon-padding-bottom) var(--button-regular-icon-padding-left);
@@ -220,11 +233,11 @@
 
       .label {
         display: inline-block;
-        width: calc(100% - var(--button-regular-icon-width) - var(--button-regular-icon-margin-left) - var(--button-regular-icon-padding-left) - var(--button-regular-icon-padding-right) - var(--button-regular-icon-margin-right) - var(--button-regular-padding-right) - var(--button-regular-padding-left));
       }
 
       &.btn-icon-right {
         text-align: right;
+        padding-right: var(--button-regular-icon-width);
 
         i {
           right: 0;
@@ -233,13 +246,10 @@
 
       &.btn-icon-left {
         text-align: left;
+        padding-left: var(--button-regular-icon-width);
 
         i {
           left: 0;
-        }
-
-        .label {
-          margin-left: calc(var(--button-regular-icon-width) + var(--button-regular-icon-margin-left) + var(--button-regular-icon-padding-left) + var(--button-regular-icon-padding-right) + var(--button-regular-icon-margin-right) + var(--button-regular-padding-left));
         }
       }
     }
@@ -256,8 +266,7 @@
         height: var(--button-small-height);
         line-height: var(--button-small-line-height);
         font-size: var(--button-small-font-size);
-        margin: var(--button-small-padding-top) var(--button-small-padding-right) var(--button-small-padding-bottom) var(--button-small-padding-left);
-        width: calc(100% - var(--button-small-padding-right) - var(--button-small-padding-left));
+        padding: var(--button-small-padding-top) var(--button-small-padding-right) var(--button-small-padding-bottom) var(--button-small-padding-left);
       }
 
       &.btn-has-icon {
@@ -273,14 +282,12 @@
           }
         }
 
-        .label {
-          width: calc(100% - var(--button-small-icon-width) - var(--button-small-icon-margin-left) - var(--button-small-icon-padding-left) - var(--button-small-icon-padding-right) - var(--button-small-icon-margin-right) - var(--button-small-padding-right) - var(--button-small-padding-left));
+        &.btn-icon-right {
+          padding-right: var(--button-small-icon-width);
         }
 
         &.btn-icon-left {
-          .label {
-            margin-left: calc(var(--button-small-icon-width) + var(--button-small-icon-margin-left) + var(--button-small-icon-padding-left) + var(--button-small-icon-padding-right) + var(--button-small-icon-margin-right) + var(--button-small-padding-left));
-          }
+          padding-left: var(--button-small-icon-width);
         }
       }
     }
@@ -297,8 +304,7 @@
         height: var(--button-large-height);
         line-height: var(--button-large-line-height);
         font-size: var(--button-large-font-size);
-        margin: var(--button-large-padding-top) var(--button-large-padding-right) var(--button-large-padding-bottom) var(--button-large-padding-left);
-        width: calc(100% - var(--button-large-padding-right) - var(--button-large-padding-left));
+        padding: var(--button-large-padding-top) var(--button-large-padding-right) var(--button-large-padding-bottom) var(--button-large-padding-left);
       }
 
       &.btn-has-icon {
@@ -314,14 +320,12 @@
           }
         }
 
-        .label {
-          width: calc(100% - var(--button-large-icon-width) - var(--button-large-icon-margin-left) - var(--button-large-icon-padding-left) - var(--button-large-icon-padding-right) - var(--button-large-icon-margin-right) - var(--button-large-padding-right) - var(--button-large-padding-left));
+        &.btn-icon-right {
+          padding-right: var(--button-large-icon-width);
         }
 
         &.btn-icon-left {
-          .label {
-            margin-left: calc(var(--button-large-icon-width) + var(--button-large-icon-margin-left) + var(--button-large-icon-padding-left) + var(--button-large-icon-padding-right) + var(--button-large-icon-margin-right) + var(--button-large-padding-left));
-          }
+          padding-left: var(--button-large-icon-width);
         }
       }
     }
