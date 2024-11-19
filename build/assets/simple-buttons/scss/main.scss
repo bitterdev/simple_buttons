@@ -171,7 +171,7 @@ div.ccm-page, div.ccm-btn-preview-container {
    * Base Style
    */
 
-  .btn {
+  .btn, div#cc-main .cm__btn, div#cc-main .pm__btn {
     all: initial;
     font-family: inherit;
     display: inline-flex;
@@ -351,7 +351,7 @@ div.ccm-page, div.ccm-btn-preview-container {
       }
     }
 
-    &.btn-outline-primary {
+    &.btn-outline-primary, &.cm__btn, &.pm__btn {
       &.disabled, &:disabled {
         color: rgb(var(--primary-button-disabled-border-color));
         background-color: transparent !important;

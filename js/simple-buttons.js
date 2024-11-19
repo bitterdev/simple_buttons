@@ -22,66 +22,69 @@
       $newBtn.removeAttr("value");
       $originalBtn.replaceWith($newBtn);
     });
-    $(".ccm-page .btn, .ccm-btn-preview-container .btn").each(function () {
-      var $btn = $(this),
-        $i = null,
-        iconPosition,
-        btnText = $btn.text().trim();
+    window.processButtons = function () {
+      $(".ccm-page .btn, .ccm-btn-preview-container .btn, .cm__btn, .pm__btn").each(function () {
+        var $btn = $(this),
+          $i = null,
+          iconPosition,
+          btnText = $btn.text().trim();
 
-      // Process all buttons that are not build with the button generator
-      if (!$btn.hasClass("btn-processed-text")) {
-        if ($btn.find("i").length) {
-          $i = $btn.find("i").clone();
-          iconPosition = $btn.html().trim().substr(0, 2).toLowerCase() === "<i" ? "left" : "right";
-          $btn.addClass("btn-has-icon");
-        }
-        $btn.addClass(CCM_BUTTON_CLASSES);
-        $btn.html("");
-        btnText = " " + btnText;
-        var btnTextFormatted = "";
-        for (var i = 0; i <= btnText.length; i++) {
-          var b = btnText.substr(i, 1);
-          if (b === " ") {
-            b = "&nbsp;";
+        // Process all buttons that are not build with the button generator
+        if (!$btn.hasClass("btn-processed-text")) {
+          if ($btn.find("i").length) {
+            $i = $btn.find("i").clone();
+            iconPosition = $btn.html().trim().substr(0, 2).toLowerCase() === "<i" ? "left" : "right";
+            $btn.addClass("btn-has-icon");
           }
-          btnTextFormatted += "<span>" + b + "</span>";
-        }
-        $btn.append($("<div/>").addClass("label").html(btnTextFormatted));
-        if ($i !== null) {
-          if (iconPosition === "left") {
-            $btn.prepend($i);
-          } else {
-            $btn.append($i);
+          $btn.addClass(CCM_BUTTON_CLASSES);
+          $btn.html("");
+          btnText = " " + btnText;
+          var btnTextFormatted = "";
+          for (var i = 0; i <= btnText.length; i++) {
+            var b = btnText.substr(i, 1);
+            if (b === " ") {
+              b = "&nbsp;";
+            }
+            btnTextFormatted += "<span>" + b + "</span>";
           }
+          $btn.append($("<div/>").addClass("label").html(btnTextFormatted));
+          if ($i !== null) {
+            if (iconPosition === "left") {
+              $btn.prepend($i);
+            } else {
+              $btn.append($i);
+            }
+          }
+          $btn.addClass("btn-processed-text");
         }
-        $btn.addClass("btn-processed-text");
-      }
 
-      // Append Hover Glow Element
-      $btn.append($("<div/>").addClass("hover-glow").css({
-        display: "none"
-      }));
-      $btn.on({
-        'mousemove': function mousemove(e) {
-          if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
-            var x = e.pageX - $btn.offset().left;
-            var y = e.pageY - $btn.offset().top;
-            $btn.find('.hover-glow').css({
-              'display': 'block',
-              'transform': 'translate(' + x + 'px,' + y + 'px)',
-              'opacity': 1
-            });
+        // Append Hover Glow Element
+        $btn.append($("<div/>").addClass("hover-glow").css({
+          display: "none"
+        }));
+        $btn.on({
+          'mousemove': function mousemove(e) {
+            if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
+              var x = e.pageX - $btn.offset().left;
+              var y = e.pageY - $btn.offset().top;
+              $btn.find('.hover-glow').css({
+                'display': 'block',
+                'transform': 'translate(' + x + 'px,' + y + 'px)',
+                'opacity': 1
+              });
+            }
+          },
+          'mouseleave': function mouseleave() {
+            if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
+              $btn.find('.hover-glow').css({
+                'opacity': 0
+              });
+            }
           }
-        },
-        'mouseleave': function mouseleave() {
-          if ($btn.hasClass("btn-hover-animation-5") && !$btn.hasClass("disabled")) {
-            $btn.find('.hover-glow').css({
-              'opacity': 0
-            });
-          }
-        }
+        });
       });
-    });
+    };
+    window.processButtons();
   });
 })(jQuery);
 
