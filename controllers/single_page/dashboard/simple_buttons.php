@@ -123,7 +123,8 @@ class SimpleButtons extends DashboardPageController
             "btn-hover-animation-3" => t("Outline animation"),
             "btn-hover-animation-4" => t("Symbol rotates 45°"),
             "btn-hover-animation-5" => t("Glow effect"),
-            "btn-hover-animation-6" => t("Symbol slides in from the side")
+            "btn-hover-animation-6" => t("Symbol slides in from the side"),
+            "btn-hover-animation-7" => t("Fade In/Out")
         ];
 
         $fontWeightClasses = [

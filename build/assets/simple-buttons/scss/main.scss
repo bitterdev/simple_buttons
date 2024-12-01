@@ -894,5 +894,11 @@ div.ccm-page, div.ccm-btn-preview-container {
         }
       }
     }
+
+    &.btn-hover-animation-7 {
+      &:not(.disabled):not(:disabled) {
+        transition: all 500ms ease-in;
+      }
+    }
   }
 }
