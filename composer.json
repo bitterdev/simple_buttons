@@ -1,5 +1,13 @@
 {
     "require": {
         "tomloprod/colority": "^1.1"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "./patch-vendorcode.sh"
+        ],
+        "post-update-cmd": [
+            "./patch-vendorcode.sh"
+        ]
     }
 }

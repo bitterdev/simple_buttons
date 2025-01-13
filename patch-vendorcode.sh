@@ -1,0 +1,1 @@
+find ./vendor -type f -exec sed -i '' -e 's/final readonly class/final class/g' {} \;

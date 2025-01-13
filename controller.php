@@ -9,7 +9,7 @@ use Concrete\Core\Entity\Package as PackageEntity;
 class Controller extends Package
 {
     protected string $pkgHandle = 'simple_buttons';
-    protected string $pkgVersion = '0.0.9';
+    protected string $pkgVersion = '0.1.0';
     protected $appVersionRequired = '9.0.0';
     protected $pkgAutoloaderRegistries = [
         'src/Bitter/SimpleButtons' => 'Bitter\SimpleButtons',
