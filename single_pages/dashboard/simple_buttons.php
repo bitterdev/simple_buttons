@@ -466,17 +466,19 @@ $buttonBuilder = $app->make(Builder::class);
     <script>
         (function ($) {
             $(function () {
+
                 let classes = $("#additionalClasses").val().split(" ");
 
                 for (let cssClass of classes) {
-                    let $option = $(".style-configurator").find("option[value='" + cssClass + "']");
-                    let $checkbox = $(".style-configurator").find("input[value='" + cssClass + "']");
+                    if (cssClass.length > 0) {
+                        let $option = $(".style-configurator").find("option[value='" + cssClass + "']");
+                        let $checkbox = $(".style-configurator").find("input[value='" + cssClass + "']");
 
-                    if ($option.length) {
-                        $option.parent().val(cssClass);
-                    } else {
-                        console.log($checkbox);
-                        $checkbox.prop("checked", "checked");
+                        if ($option.length) {
+                            $option.parent().val(cssClass);
+                        } else {
+                            $checkbox.prop("checked", "checked");
+                        }
                     }
                 }
 
