@@ -378,8 +378,8 @@ class Button extends ConcreteObject
 
         $labelHtml = "";
 
-        for ($i = 0; $i <= strlen($this->getLabel()); $i++) {
-            $b = substr($this->getLabel(), $i, 1);
+        for ($i = 0; $i <= mb_strlen($this->getLabel()); $i++) {
+            $b = mb_substr($this->getLabel(), $i, 1);
 
             if ($b === " ") {
                 $b = "&nbsp;";

@@ -34,9 +34,8 @@
                     $btn.html("");
 
                     btnText = " " + btnText;
-
                     let btnTextFormatted = "";
-                    let chars = Array.from(btnText); // Wandelt den String in ein korrektes Array von Unicode-Zeichen um
+                    let chars = [...btnText]; // Wandelt den String in einzelne, korrekte Unicode-Zeichen um
 
                     for (let char of chars) {
                         if (char === " ") {
