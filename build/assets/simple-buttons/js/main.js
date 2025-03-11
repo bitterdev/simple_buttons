@@ -36,15 +36,13 @@
                     btnText = " " + btnText;
 
                     let btnTextFormatted = "";
+                    let chars = Array.from(btnText); // Wandelt den String in ein korrektes Array von Unicode-Zeichen um
 
-                    for (let i = 0; i <= btnText.length; i++) {
-                        let b = btnText.substr(i, 1);
-
-                        if (b === " ") {
-                            b = "&nbsp;"
+                    for (let char of chars) {
+                        if (char === " ") {
+                            char = "&nbsp;";
                         }
-
-                        btnTextFormatted += "<span>" + b + "</span>";
+                        btnTextFormatted += `<span>${char}</span>`;
                     }
 
                     $btn.append($("<div/>").addClass("label").html(btnTextFormatted));
