@@ -1,4 +1,7 @@
 {
+    "name": "bitter/simple_buttons",
+    "type": "concrete5-package",
+    "description": "Simple Buttons is a powerful Concrete CMS add-on that enables customizable button designs.",
     "require": {
         "tomloprod/colority": "^1.1"
     },
