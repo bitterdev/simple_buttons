@@ -12,5 +12,10 @@
         "post-update-cmd": [
             "./patch-vendorcode.sh"
         ]
+    },
+    "autoload": {
+      "psr-4": {
+        "Bitter\\SimpleButtons\\": "src/Bitter/SimpleButtons"
+      }
     }
 }
