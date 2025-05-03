@@ -23,7 +23,7 @@ jobs:
       - name: Setup PHP with Composer
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.1' # oder andere Version falls benötigt
+          php-version: '8.2' # oder andere Version falls benötigt
           tools: composer
 
       - name: Setup Node.js
