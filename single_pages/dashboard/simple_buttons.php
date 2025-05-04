@@ -67,6 +67,8 @@ $buttonBuilder = $app->make(Builder::class);
     ?>
 </div>
 
+<?php \Concrete\Core\View\View::element("dashboard/did_you_know", [], "simple_buttons"); ?>
+
 <form action="#" method="post">
     <?php echo $token->output("update_settings"); ?>
 

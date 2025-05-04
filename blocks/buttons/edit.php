@@ -28,6 +28,9 @@ $idSuffix = $idHelper->getString();
 
 /** @noinspection PhpUnhandledExceptionInspection */
 View::element("dashboard/help_blocktypes", [], "simple_buttons");
+
+/** @noinspection PhpUnhandledExceptionInspection */
+View::element("dashboard/did_you_know", [], "simple_buttons");
 ?>
 
 <div class="d-grid gap-1">
@@ -293,7 +296,7 @@ View::element("dashboard/help_blocktypes", [], "simple_buttons");
     .btn-entry.closed .inner {
         display: none;
     }
-    
+
     .btn-entry .move-entry-btn {
         cursor: move;
     }
@@ -467,4 +470,3 @@ View::element("dashboard/help_blocktypes", [], "simple_buttons");
         });
     })(jQuery);
 </script>
-
